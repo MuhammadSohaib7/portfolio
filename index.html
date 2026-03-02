@@ -162,23 +162,31 @@
                         <li><a href="#" aria-label="Twitter">X</a></li>
                     </ul>
                 </div>
-    <form action="https://formspree.io/f/xzdaqnrl" method="POST">
-     <input type="hidden" name="_next" value="https://MuhammadSohaib7.github.io/portfolio/formsubmit.html">
-    <div class="field">
+<form action="https://formspree.io/f/xzdaqnrl" method="POST" class="contact-form">
+  <!-- Redirect to your custom thank you page -->
+  <input type="hidden" name="_next" value="https://MuhammadSohaib7.github.io/portfolio/formsubmit.html">
+  <!-- Name field -->
+  <div class="field">
     <label for="name">Name</label>
     <input id="name" name="name" type="text" placeholder="Your name" required />
-    </div>
+  </div>
+  <!-- Email field -->
   <div class="field">
     <label for="email">Email</label>
     <input id="email" name="email" type="email" placeholder="your@email.com" required />
   </div>
+  <!-- Message field -->
   <div class="field">
     <label for="message">Message</label>
     <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
   </div>
+  <!-- Disable captcha -->
   <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
+  <!-- Email template style -->
+  <input type="hidden" name="_template" value="table">
+  <!-- Submit button -->
   <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
   </div>
   </section>
     </main>
