@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden; /* Taake screen ke bahar scroll na ho */
+}
+/* Launcher / Floating Button */
+#chatbot-launcher {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #f30000;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, background 0.3s ease;
+    z-index: 9999;
+}
+
+#chatbot-launcher:hover {
+    transform: scale(1.1) rotate(5deg);
+    background: #0056b3;
+}
+
+/* 1. Parent Overlay: Full screen cover */
+#intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black; /* Background black rakhein taake agar image choti ho toh gap na dikhe */
+    z-index: 9999;
+}
+
+/* 2. Image: Forcefully cover the whole screen */
+#intro-video {
+    width: 100vw;    /* Screen ki width jitna */
+    height: 100vh;   /* Screen ki height jitna */
+    object-fit: cover; /* Aspect ratio maintain rakhte hue poora area cover karega */
+    display: block;  /* Inline gap khatam karne ke liye */
+}
+.chatbot-hidden {
+    display: none !important; /* !important lagayein taake kuch aur override na kare */
+}
+
+.chatbot-visible {
+    display: flex !important;
+}
+
+#chatbot-box {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 360px;
+    height: 500px;
+    background: #111111;
+    border: 1px solid #333333;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#chatbot-box.chatbot-hidden {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    pointer-events: none;
+}
+
+#chatbot-box.chatbot-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
+}
+
+.chatbot-header {
+    background: #1f1f1f;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333333;
+}
+
+.bot-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bot-status-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff66;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00ff66;
+}
+
+.chatbot-header h4 {
+    margin: 0;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #888888;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #ffffff;
+}
+
+/* Messages Section */
+.chatbot-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;   /* ← ye wapas lao */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+
+/* Update: Video hamesha peeche fixed rahe */
+.chat-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none; /* ← YE ZAROORI HAI: Taake video par click na ho aur scroll disturb na ho */
+    position: sticky;     /* ← Ye video ko background mein lock rakhega scroll ke waqt */
+}
+
+.message {
+    padding: 10px 14px;
+    border-radius: 12px;
+    max-width: 75%;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    position: relative; /* ← VIDEO KE UPAR RAKHNE KE LIYE */
+    z-index: 1;         /* ← VIDEO KE UPAR RAKHNE KE LIYE */
+}
+
+.bot-message {
+    background: #222222;
+    color: #e0e0e0;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+    border: 1px solid #333333;
+}
+
+.user-message {
+    background: #0070f3;
+    color: #ffffff;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.thinking-message {
+    color: #888888;
+    font-style: italic;
+    animation: thinking-pulse 1.2s ease-in-out infinite;
+}
+.thinking-message img {
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+#thinking-indicator {
+    z-index: 9999 !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Changed to flex-start for alignment */
+    margin-bottom: 10px;
+}
+
+@keyframes thinking-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.chatbot-input-container {
+    padding: 12px;
+    background: #1f1f1f;
+    border-top: 1px solid #333333;
+    display: flex;
+    gap: 8px;
+}
+
+#chatbot-input {
+    flex: 1;
+    background: #111111;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 10px;
+    color: #ffffff;
+    outline: none;
+    font-size: 14px;
+}
+
+#chatbot-input:focus {
+    border-color: #0070f3;
+}
+
+#chatbot-send-btn {
+    background: #0070f3;
+    border: none;
+    color: white;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+#chatbot-send-btn:hover {
+    background: #bb0404;
+}
+
+#chatbot-send-btn:disabled,
+#chatbot-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

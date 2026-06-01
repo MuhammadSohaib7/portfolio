@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+<div id="chatbot-launcher" onclick="toggleChatbot()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+        <path d="M12 2C6.477 2 2 6.119 2 11.2c0 2.414 1.011 4.607 2.684 6.224L3.05 21.35a.75.75 0 00.99.99l3.926-1.636A10.37 10.37 0 0012 20.4c5.523 0 10-4.119 10-9.2S17.523 2 12 2zm0 16.9a8.834 8.834 0 01-3.957-.93.75.75 0 00-.638-.046l-2.457 1.023 1.023-2.457a.75.75 0 00-.046-.638A7.702 7.702 0 013.5 11.2C3.5 7.224 7.306 4 12 4s8.5 3.224 8.5 7.2-3.806 7.2-8.5 7.2z"/>
+    </svg>
+</div>
+
+<div id="chatbot-box" class="chatbot-hidden">
+    <div class="chatbot-header">
+        <div class="bot-info">
+            <span class="bot-status-dot"></span>
+            <h4>AI Assistant</h4>
+        </div>
+        <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+    </div>
+
+    <div id="chatbot-messages" class="chatbot-messages">
+        <div class="message bot-message">
+            Hi! I am Sohaib AI Assistant. How can I help you today?
+        </div>
+    </div>
+
+    <div class="chatbot-input-container">
+        <input type="text" id="chatbot-input" placeholder="Type a message..." onkeydown="if(event.key === 'Enter') sendMessage()">
+        <button id="chatbot-send-btn" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<div id="intro-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:9999; background:black; align-items:center; justify-content:center;">
+    <img id="intro-video" src="./bg-video.webp" alt="Loading..." style="width: 100%; height: 100%; object-fit: cover;">
+</img>
+</div>
+</div>
