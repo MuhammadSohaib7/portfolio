@@ -19,8 +19,9 @@
 <body>
     <header class="site-header" id="top">
         <nav class="navbar" id="navbar">
-            <a href="#home" class="logo"><span class="logo-m">M</span><span class="logo-s">S</span></a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+<a href="#home" class="logo">
+  <span style="color: white;">M</span><span style="color: #ff0000;">S</span></a>
+             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -32,29 +33,30 @@
     </header>
 
     <main>
-        <!-- Hero -->
-        <section class="section hero" id="home">
-            <div class="container hero-flex-split">
+      <!-- Hero -->
+<section class="section hero" id="home">
+  <div class="container hero-flex-split">
 
-                                <div class="hero-content">
-                    <p class="eyebrow">Web Developer & WordPress Expert</p>
-                    <h1 class="headline">Muhammad <span>Sohaib</span></h1>
-                    <p class="subtitle">I craft clean, responsive, and performance-focused websites with a professional touch.</p>
-                    <div class="cta-group">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-outline">Contact Me</a>
-                    </div>
-                </div>
+    <!-- Left: Text -->
+    <div class="hero-content">
+      <p class="eyebrow">Web Developer & AI Developer</p>
+      <h1 class="headline">Muhammad <span>Sohaib</span></h1>
+      <p class="subtitle">I craft clean, responsive, and performance-focused websites with a professional touch.</p>
+      <div class="cta-group">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
 
-                                <div class="hero-visual-right">
-                    <video autoplay loop muted playsinline class="ai-hero-video">
-                        <source src="./hero-bg.mp4" type="video/mp4">
-                    </video>
-                </div>
+    <!-- Right: Spline -->
+    <div class="hero-spline">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.97/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/IrPO4MsivYUAS5o6/scene.splinecode"></spline-viewer>
+    </div>
 
-            </div>
-            <div class="hero-bg" aria-hidden="true"></div>
-        </section>
+  </div>
+</section>
+</section>
 
         <!-- About -->
         <section class="section about scroll-reveal-section" id="about">
@@ -68,115 +70,126 @@
                     <ul class="about-list">
                         <li><strong>Location:</strong> Remote / Open to opportunities</li>
                         <li><strong>Email:</strong> <a href="mailto:sohaibkhani662@gmail.com">sohaibkhani662@gmail.com</a></li>
-                        <li><strong>Focus:</strong> Front-end, WordPress, Growing Back‑end</li>
+                        <li><strong>Focus:</strong> Front-end, AI & Chatbots, Growing Back‑end</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Skills -->
-        <section class="section skills scroll-reveal-section" id="skills">
-            <div class="container">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span>HTML, CSS, JavaScript</span>
-                            <span class="skill-value">90%</span>
-                        </div>
-                        <div class="progress"><span style="--w:90%"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span>Bootstrap</span>
-                            <span class="skill-value">85%</span>
-                        </div>
-                        <div class="progress"><span style="--w:85%"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span>WordPress</span>
-                            <span class="skill-value">88%</span>
-                        </div>
-                        <div class="progress"><span style="--w:88%"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span>Canva</span>
-                            <span class="skill-value">80%</span>
-                        </div>
-                        <div class="progress"><span style="--w:80%"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span>Digital Marketing</span>
-                            <span class="skill-value">75%</span>
-                        </div>
-                        <div class="progress"><span style="--w:75%"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span>Back‑end Development (Learning)</span>
-                            <span class="skill-value">50%</span>
-                        </div>
-                        <div class="progress"><span style="--w:50%"></span></div>
-                    </div>
-                </div>
-                <div class="skill" style="margin-top: 25px;">
-                        <div class="skill-header">
-                            <span>AI & Chatbot Dev</span>
-                            <span class="skill-value">95%</span>
-                        </div>
-                        <div class="progress"><span style="--w:75%"></span></div>
-            </div>
-        </section>
+       <!-- Skills -->
+<section class="section skills scroll-reveal-section" id="skills">
+  
+  <!-- 3D Animation Canvas -->
+  <canvas id="skills-bg"></canvas>
+  
+  <div class="container" style="position:relative; z-index:1;">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">
+        <div class="skill-header">
+          <span>HTML, CSS, JavaScript</span>
+          <span class="skill-value">90%</span>
+        </div>
+        <div class="progress"><span style="--w:90%"></span></div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span>Bootstrap</span>
+          <span class="skill-value">85%</span>
+        </div>
+        <div class="progress"><span style="--w:85%"></span></div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span>WordPress</span>
+          <span class="skill-value">88%</span>
+        </div>
+        <div class="progress"><span style="--w:88%"></span></div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span>Canva</span>
+          <span class="skill-value">80%</span>
+        </div>
+        <div class="progress"><span style="--w:80%"></span></div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span>Digital Marketing</span>
+          <span class="skill-value">75%</span>
+        </div>
+        <div class="progress"><span style="--w:75%"></span></div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span>Back‑end Development (Learning)</span>
+          <span class="skill-value">50%</span>
+        </div>
+        <div class="progress"><span style="--w:50%"></span></div>
+      </div>
+    </div>
+    <div class="skill" style="margin-top: 25px;">
+      <div class="skill-header">
+        <span>AI & Chatbot Dev</span>
+        <span class="skill-value">95%</span>
+      </div>
+      <div class="progress"><span style="--w:95%"></span></div>
+    </div>
+  </div>
 
-        <!-- Projects -->
-        <section class="section projects scroll-reveal-section" id="projects">
-            <div class="container">
-                <h2 class="section-title">Projects</h2>
-                <div class="cards">
-                    <article class="card">
-                        <div class="card-body">
-                            <h3>Store Website</h3>
-                            <p>A modern store website built using HTML, CSS, and JAVASCRIPT. Clean UI and responsive layout.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://muhammadsohaib7.github.io/store-site/" target="_blank"
-                             class="btn btn-small">View</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card-body">
-                            <h3>WordPress Store Website</h3>
-                            <p>WordPress theme customization and performance optimization hosted on pantheon.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://dev-muhammadsohaib.pantheonsite.io/?page_id=26" class="btn btn-small" target="_blank">View</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card-body">
-                            <h3>Full-Stack (Learning)</h3>
-                            <p>Currently mastering server-side development to build scalable web applications.
-                                Tech: Node.js, Express, MongoDB.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-small">View</a>
-                        </div>
-                    </article>
-                 <article class="card">
-                        <div class="card-body">
-                            <h3>AI Smart Agent</h3>
-                            <p>A professional AI chatbot built with Python and LangChain. Integrated with Groq and Supabase to capture leads and provide real-time intelligent responses.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://nexus-ai-agent-boti9zexyqnxdbx98ndu8f.streamlit.app/" class="btn btn-small" target="_blank">View</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+</section>
+
+       <!-- Projects -->
+<section class="section projects scroll-reveal-section" id="projects">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="cards">
+      <article class="card tilt-card">
+        <div class="card-shine"></div>
+        <div class="card-body">
+          <h3>Store Website</h3>
+          <p>A modern store website built using HTML, CSS, and JAVASCRIPT. Clean UI and responsive layout.</p>
+        </div>
+        <div class="card-footer">
+          <a href="https://muhammadsohaib7.github.io/store-site/" target="_blank" class="btn btn-small">View</a>
+        </div>
+      </article>
+
+      <article class="card tilt-card">
+        <div class="card-shine"></div>
+        <div class="card-body">
+          <h3>WordPress Store Website</h3>
+          <p>WordPress theme customization and performance optimization hosted on pantheon.</p>
+        </div>
+        <div class="card-footer">
+          <a href="https://dev-muhammadsohaib.pantheonsite.io/?page_id=26" class="btn btn-small" target="_blank">View</a>
+        </div>
+      </article>
+
+      <article class="card tilt-card">
+        <div class="card-shine"></div>
+        <div class="card-body">
+          <h3>Full-Stack (Learning)</h3>
+          <p>Currently mastering server-side development to build scalable web applications. Tech: Node.js, Express, MongoDB.</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-small">View</a>
+        </div>
+      </article>
+
+      <article class="card tilt-card">
+        <div class="card-shine"></div>
+        <div class="card-body">
+          <h3>AI Smart Agent</h3>
+          <p>A professional AI chatbot built with Python and LangChain. Integrated with Groq and Supabase to capture leads and provide real-time intelligent responses.</p>
+        </div>
+        <div class="card-footer">
+          <a href="https://nexus-ai-agent-boti9zexyqnxdbx98ndu8f.streamlit.app/" class="btn btn-small" target="_blank">View</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
         <!-- Ads Section-->
          <section style="background-color: #0a0a0a; padding: 80px 20px; font-family: sans-serif; color: white;">
@@ -267,90 +280,107 @@
         </div>
     </div>
 </section>
-        <!-- Contact -->
-        <section class="section contact scroll-reveal-section" id="contact">
-            <div class="container grid two-col">
-                <div>
-                    <h2 class="section-title">Contact</h2>
-                    <p class="body-text">Have a project in mind or want to collaborate? Let's talk.</p>
-                    <ul class="socials">
-                        <li><a href="mailto:sohaibkhani662@gmail.com" aria-label="Email">✉️</a></li>
-                        <li><a href="#" aria-label="LinkedIn">in</a></li>
-                        <li><a href="#" aria-label="GitHub">GH</a></li>
-                        <li><a href="#" aria-label="Twitter">X</a></li>
-                    </ul>
-                </div>
-<form action="https://formspree.io/f/xzdaqnrl" method="POST" class="contact-form">
-  <!-- Redirect to your custom thank you page -->
-  <input type="hidden" name="_next" value="https://MuhammadSohaib7.github.io/portfolio/formsubmit.html">
-  <!-- Name field -->
-  <div class="field">
-    <label for="name">Name</label>
-    <input id="name" name="name" type="text" placeholder="Your name" required />
-  </div>
-  <!-- Email field -->
-  <div class="field">
-    <label for="email">Email</label>
-    <input id="email" name="email" type="email" placeholder="your@email.com" required />
-  </div>
-  <!-- Message field -->
-  <div class="field">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
-  </div>
-  <!-- Disable captcha -->
-  <input type="hidden" name="_captcha" value="false">
-  <!-- Email template style -->
-  <input type="hidden" name="_template" value="table">
-  <!-- Submit button -->
-  <button type="submit" class="btn btn-primary">Send Message</button>
-</form>
-  </div>
-  </section>
-    </main>
+       <!-- Contact -->
+<section class="section contact scroll-reveal-section" id="contact">
+  <div class="container grid two-col">
+    
+    <!-- Left Side -->
+    <div>
+      <h2 class="section-title">Contact</h2>
+      <p class="body-text">Have a project in mind or want to collaborate? Let's talk.</p>
+      <ul class="socials">
+        <li><a href="mailto:sohaibkhani662@gmail.com" aria-label="Email">✉️</a></li>
+        <li><a href="https://www.linkedin.com/in/muhammad-sohaib-0467262a1/" aria-label="LinkedIn">in</a></li>
+        <li><a href="https://github.com/MuhammadSohaib7" aria-label="GitHub">GH</a></li>
+        <li><a href="#" aria-label="Twitter">X</a></li>
+      </ul>
 
+      <!-- Three.js Lightweight Animation -->
+      <canvas id="contact-canvas" style="
+        width: 100%;
+        height: 250px;
+        margin-top: 30px;
+        border-radius: 12px;
+        display: block;
+      "></canvas>
+    </div>
+
+    <!-- Right Side: Form -->
+    <form action="https://formspree.io/f/xzdaqnrl" method="POST" class="contact-form">
+      <input type="hidden" name="_next" value="https://MuhammadSohaib7.github.io/portfolio/formsubmit.html">
+      
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+      </div>
+      
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="your@email.com" required />
+      </div>
+      
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+      </div>
+      
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+
+  </div>
+</section>
     <footer class="site-footer">
         <div class="container">
             <p>© <span id="year"></span> Muhammad Sohaib. All rights reserved.</p>
         </div>
     </footer>
 
-   <div id="intro-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:9999; background:black; align-items:center; justify-content:center;">
-    <img id="intro-video" src="bot/bg-video.webp" style="max-width: 80%;" alt="Animation">
-</div>
-
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 
+<!-- Spline Intro Overlay -->
+<div id="intro-overlay" style="display:none; position:fixed; top:0; left:0; 
+width:100%; height:100%; background:rgba(0,0,0,0.9); 
+z-index:9999; justify-content:center; align-items:center;">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.97/build/spline-viewer.js"></script>
+  <spline-viewer 
+    url="https://prod.spline.design/bEuNdG041ehMuF0i/scene.splinecode"
+    background="transparent"
+    style="width:300px; height:300px; border-radius:50%;">
+  </spline-viewer>
+</div>
+
+<!-- Bot Launcher -->
 <div id="chatbot-launcher" onclick="toggleChatbot()">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
-        <path d="M12 2C6.477 2 2 6.119 2 11.2c0 2.414 1.011 4.607 2.684 6.224L3.05 21.35a.75.75 0 00.99.99l3.926-1.636A10.37 10.37 0 0012 20.4c5.523 0 10-4.119 10-9.2S17.523 2 12 2zm0 16.9a8.834 8.834 0 01-3.957-.93.75.75 0 00-.638-.046l-2.457 1.023 1.023-2.457a.75.75 0 00-.046-.638A7.702 7.702 0 013.5 11.2C3.5 7.224 7.306 4 12 4s8.5 3.224 8.5 7.2-3.806 7.2-8.5 7.2z"/>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+    <path d="M12 2C6.477 2 2 6.119 2 11.2c0 2.414 1.011 4.607 2.684 6.224L3.05 21.35a.75.75 0 00.99.99l3.926-1.636A10.37 10.37 0 0012 20.4c5.523 0 10-4.119 10-9.2S17.523 2 12 2zm0 16.9a8.834 8.834 0 01-3.957-.93.75.75 0 00-.638-.046l-2.457 1.023 1.023-2.457a.75.75 0 00-.046-.638A7.702 7.702 0 013.5 11.2C3.5 7.224 7.306 4 12 4s8.5 3.224 8.5 7.2-3.806 7.2-8.5 7.2z"/>
+  </svg>
 </div>
 
+<!-- Chatbot Box -->
 <div id="chatbot-box" class="chatbot-hidden">
-    <div class="chatbot-header">
-        <div class="bot-info">
-            <span class="bot-status-dot"></span>
-            <h4>AI Assistant</h4>
-        </div>
-        <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+  <div class="chatbot-header">
+    <div class="bot-info">
+      <span class="bot-status-dot"></span>
+      <h4>AI Assistant</h4>
     </div>
+    <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+  </div>
 
-    <div id="chatbot-messages" class="chatbot-messages">
-        <div class="message bot-message">
-            Hi! I am Sohaib AI Assistant. How can I help you today?
-        </div>
+  <div id="chatbot-messages" class="chatbot-messages">
+    <div class="message bot-message">
+      Hi! I am Sohaib AI Assistant. How can I help you today?
     </div>
+  </div>
 
-    <div class="chatbot-input-container">
-        <input type="text" id="chatbot-input" placeholder="Type a message..." onkeydown="if(event.key === 'Enter') sendMessage()">
-        <button id="chatbot-send-btn" onclick="sendMessage()">Send</button>
-    </div>
-</div>
-
-<div id="intro-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:9999; background:black; align-items:center; justify-content:center;">
-    <img id="intro-video" src="./bg-video.webp" alt="Loading..." style="width: 100vw; height: 100vh; object-fit: cover; display: block;">
+  <div class="chatbot-input-container">
+    <input type="text" id="chatbot-input" placeholder="Type a message..." 
+      onkeydown="if(event.key === 'Enter') sendMessage()">
+    <button id="chatbot-send-btn" onclick="sendMessage()">Send</button>
+  </div>
 </div>
 </div>
 </div>

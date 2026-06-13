@@ -13,36 +13,29 @@ let thinkingEl = null;
 
 function toggleChatbot() {
     const chatBox = document.getElementById('chatbot-box');
-    const introAnimation = document.getElementById('intro-video');
-    const overlay = document.getElementById('intro-overlay'); // Yeh wapas aa gaya!
+    const overlay = document.getElementById('intro-overlay');
 
-    // Safety Check: Agar ye elements nahi mile, toh function wahi ruk jaye
     if (!chatBox || !overlay) {
-        console.log("Chatbot ke elements nahi mile, HTML mein IDs check karein.");
+        console.log("Element nahi mila!");
         return;
     }
 
     if (chatBox.classList.contains('chatbot-hidden')) {
-        // 1. Overlay dikhao (Animation shuru)
+        // Orb animation dikhao
         overlay.style.display = 'flex';
 
-        // 2. 3 seconds ka wait
+        // 3 second baad chatbox kholo
         setTimeout(() => {
-            // 3. Animation hatao
             overlay.style.display = 'none';
-
-            // 4. Chatbox dikhao
             chatBox.classList.remove('chatbot-hidden');
             chatBox.classList.add('chatbot-visible');
         }, 3000);
 
     } else {
-        // Band karne ka logic
         chatBox.classList.remove('chatbot-visible');
         chatBox.classList.add('chatbot-hidden');
     }
 }
-
 sendBtn?.addEventListener('click', sendMessage);
 chatInput?.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {

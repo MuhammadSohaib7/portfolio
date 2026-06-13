@@ -7,6 +7,24 @@
 body {
     overflow-x: hidden; /* Taake screen ke bahar scroll na ho */
 }
+/* Mobile Responsive - Bot */
+@media (max-width: 480px) {
+  #chatbot-box {
+    width: 92vw;
+    height: 75vh;
+    bottom: 90px;
+    right: 4vw;
+    left: 4vw;
+  }
+}
+
+#chatbot-launcher {
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+  }
+
 /* Launcher / Floating Button */
 #chatbot-launcher {
     position: fixed;
