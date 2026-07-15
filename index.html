@@ -31,11 +31,19 @@
 
 </head>
 <body>
+
+    <!-- Wavy Particle Background (site-wide) -->
+    <canvas id="bg-particles"></canvas>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
     <header class="site-header" id="top">
         <nav class="navbar" id="navbar">
 <a href="#home" class="logo">
-  <span style="color: white;">M</span><span style="color: #ff0000;">S</span></a>
-             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  <img src="logo_pic.png" class="logo">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -77,8 +85,8 @@
             <div class="container grid two-col">
                 <div>
                     <h2 class="section-title">About Me</h2>
-                    <p class="body-text">I am Muhammad Sohaib, a Web Developer and AI Enthusiast. I specialize in building high-performance, responsive web applications using HTML5, CSS3, JavaScript, and React.</p>
-                    <p class="body-text">Currently, I am expanding my expertise into Full-Stack development by integrating AI agents (LangChain) and learning Node.js. With a background in WordPress and Digital Marketing, I build digital solutions that are visually stunning and engineered for real business growth.</p>
+                    <p class="body-text">I am Muhammad Sohaib, a Full-Stack Web Developer and AI Enthusiast. I specialize in building modern, high-performance, and responsive web applications using React, Next.js, Node.js, Express.js, and Supabase.</p>
+                    <p class="body-text">I also have experience with HTML5, CSS3, JavaScript, and WordPress, enabling me to create scalable, user-friendly digital solutions. Alongside web development, I explore AI technologies to build intelligent applications that solve real-world problems and deliver meaningful user experiences.</p>
                 </div>
                 <div class="about-card">
                     <ul class="about-list">
@@ -161,6 +169,7 @@
       <article class="card tilt-card">
         <div class="card-shine"></div>
         <div class="card-body">
+          <img src="images/store_website.png" alt="WordPress Project" class="project-img">
           <h3>Store Website</h3>
           <p>A modern store website built using HTML, CSS, and JAVASCRIPT. Clean UI and responsive layout.</p>
         </div>
@@ -172,6 +181,7 @@
       <article class="card tilt-card">
         <div class="card-shine"></div>
         <div class="card-body">
+          <img src="images/wordpress.png" alt="WordPress Project" class="project-img">
           <h3>WordPress Store Website</h3>
           <p>WordPress theme customization and performance optimization hosted on pantheon.</p>
         </div>
@@ -180,20 +190,22 @@
         </div>
       </article>
 
-      <article class="card tilt-card">
-        <div class="card-shine"></div>
-        <div class="card-body">
-          <h3>Full-Stack (Learning)</h3>
-          <p>Currently mastering server-side development to build scalable web applications. Tech: Node.js, Express, MongoDB.</p>
-        </div>
-        <div class="card-footer">
-          <a href="#" class="btn btn-small">View</a>
-        </div>
-      </article>
+      <article class="card">
+                        <div class="card-body">
+                          <img src="images/luxsora_skin.png" alt="WordPress Project" class="project-img">
+                            <h3>Luxora Skin — E-commerce Store</h3>
+                            <p>A full-stack skincare e-commerce store with product catalog, cart, and admin panel.
+                                Tech Next.js, Node.js, Express, Supabase.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://luxora-skin-frontend.vercel.app" target="_blank" class="btn btn-small">View</a>
+                        </div>
+                    </article>
 
       <article class="card tilt-card">
         <div class="card-shine"></div>
         <div class="card-body">
+          <img src="images/chatbot.png" alt="WordPress Project" class="project-img">
           <h3>AI Smart Agent</h3>
           <p>A professional AI chatbot built with Python and LangChain. Integrated with Groq and Supabase to capture leads and provide real-time intelligent responses.</p>
         </div>
@@ -218,7 +230,7 @@
         }
         .ads-card:hover {
             transform: translateY(-10px);
-            border-color: #ff0000; /* Red border on hover */
+            border-color: #ff0000;
             box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
         }
     </style>
@@ -306,7 +318,6 @@
         <li><a href="mailto:sohaibkhani662@gmail.com" aria-label="Email">✉️</a></li>
         <li><a href="https://www.linkedin.com/in/muhammad-sohaib-0467262a1/" aria-label="LinkedIn">in</a></li>
         <li><a href="https://github.com/MuhammadSohaib7" aria-label="GitHub">GH</a></li>
-        <li><a href="#" aria-label="Twitter">X</a></li>
       </ul>
 
       <!-- Three.js Lightweight Animation -->
@@ -398,7 +409,7 @@ z-index:9999; justify-content:center; align-items:center;">
 </div>
 </div>
 </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script src="animations.js"></script>
     <script src="bot/script.js" defer></script>
 </body>

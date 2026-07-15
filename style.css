@@ -35,13 +35,16 @@
     justify-content: space-between;
   }
   .logo {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    color: var(--white);
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    letter-spacing: 1px;
-  }
+}
+.logo img {
+    height: 50px;   /* 45px, 50px ya 55px try kar sakte ho */
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
 
   .nav-toggle {
     display: none;
@@ -229,6 +232,21 @@ spline-viewer {
   display: inline-block;
 }
 
+.project-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.35s ease;
+}
+
+.project-img:hover{
+    border: 2px solid #ff0000;
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
 .btn-small:hover {
   background-color: #e50914;
   color: #fff;
@@ -308,3 +326,76 @@ spline-viewer {
   /* Scroll animation helpers */
   [data-animate] { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
   [data-animate].show { opacity: 1; transform: none; }
+
+
+  /* ===== Particle Background (site-wide) ===== */
+#bg-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Make sure page content sits above the particle canvas */
+.site-header,
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Custom Cursor ===== */
+body {
+  cursor: auto;
+}
+
+
+#cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+#cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 0, 0, 0.6);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+}
+
+/* Cursor grows slightly + turns fuller red on clickable elements */
+#cursor-ring.cursor-hover {
+  width: 50px;
+  height: 50px;
+  border-color: var(--red);
+  background: rgba(255, 0, 0, 0.08);
+}
+
+/* Hide custom cursor on touch devices (mobile/tablet) where it doesn't apply */
+@media (hover: none) and (pointer: coarse) {
+  #cursor-dot,
+  #cursor-ring {
+    display: none;
+  }
+  body, a, button, .btn, .nav-link, .card, input, textarea {
+    cursor: auto;
+  }
+}

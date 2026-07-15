@@ -34,7 +34,9 @@ const contactCtx = contactCanvas.getContext('2d');
     function onScroll() {
       const scrolled = window.scrollY > 6;
       nav.style.boxShadow = scrolled ? '0 6px 20px rgba(0,0,0,0.45)' : 'none';
-      if (window.scrollY > 400) backToTop.classList.add('show'); else backToTop.classList.remove('show');
+      if (backToTop) {
+        if (window.scrollY > 400) backToTop.classList.add('show'); else backToTop.classList.remove('show');
+      }
     }
     window.addEventListener('scroll', onScroll);
     onScroll();
@@ -65,10 +67,12 @@ const contactCtx = contactCanvas.getContext('2d');
     });
   
     // Back to top
-    backToTop.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (backToTop) {
+      backToTop.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
   
     // Set current year
     const yearEl = document.getElementById('year');
@@ -295,3 +299,136 @@ function animateContact() {
 }
 
 animateContact();
+
+// ===== SITE-WIDE WAVY PARTICLE BACKGROUND =====
+(function () {
+  const bgCanvas = document.getElementById('bg-particles');
+  if (!bgCanvas) return;
+  const bgCtx = bgCanvas.getContext('2d');
+
+  let bgW, bgH;
+  function resizeBgCanvas() {
+    bgW = bgCanvas.width = window.innerWidth;
+    bgH = bgCanvas.height = window.innerHeight;
+  }
+  resizeBgCanvas();
+  window.addEventListener('resize', resizeBgCanvas);
+
+  const bgMouse = { x: bgW / 2, y: bgH / 2 };
+  document.addEventListener('mousemove', (e) => {
+    bgMouse.x = e.clientX;
+    bgMouse.y = e.clientY;
+  });
+
+  // Fewer particles on small/mobile screens for smooth performance
+  const bgParticleCount = window.innerWidth < 768 ? 150 : 400;
+  const bgParticles = [];
+
+  class BgParticle {
+    constructor() { this.reset(); }
+    reset() {
+      this.x = Math.random() * bgW;
+      this.y = Math.random() * bgH;
+      this.baseY = this.y;
+      this.speed = 0.3 + Math.random() * 0.5;
+      this.angle = Math.random() * Math.PI * 2;
+      this.amplitude = 15 + Math.random() * 35;
+      this.size = 1 + Math.random() * 1.3;
+      this.opacity = 0.25 + Math.random() * 0.4;
+      // ~10% particles are red (brand accent), rest are white/silver
+      this.isRed = Math.random() < 0.1;
+    }
+    update() {
+      this.angle += 0.01;
+      this.x += this.speed;
+      this.y = this.baseY + Math.sin(this.angle) * this.amplitude;
+
+      if (this.x > bgW + 20) {
+        this.x = -20;
+        this.baseY = Math.random() * bgH;
+      }
+
+      // gentle mouse repulsion
+      const dx = this.x - bgMouse.x;
+      const dy = this.y - bgMouse.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 100) {
+        const force = (100 - dist) / 100;
+        this.x += (dx / dist) * force * 3;
+        this.y += (dy / dist) * force * 3;
+      }
+    }
+    draw() {
+      bgCtx.beginPath();
+      bgCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      bgCtx.fillStyle = this.isRed
+        ? `rgba(255, 0, 0, ${this.opacity})`
+        : `rgba(255, 255, 255, ${this.opacity * 0.6})`;
+      bgCtx.fill();
+    }
+  }
+
+  for (let i = 0; i < bgParticleCount; i++) bgParticles.push(new BgParticle());
+
+  function connectBgParticles() {
+    for (let i = 0; i < bgParticles.length; i++) {
+      for (let j = i + 1; j < bgParticles.length; j++) {
+        const dx = bgParticles[i].x - bgParticles[j].x;
+        const dy = bgParticles[i].y - bgParticles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 55) {
+          bgCtx.beginPath();
+          bgCtx.strokeStyle = `rgba(255, 255, 255, ${0.12 * (1 - dist / 55)})`;
+          bgCtx.lineWidth = 0.5;
+          bgCtx.moveTo(bgParticles[i].x, bgParticles[i].y);
+          bgCtx.lineTo(bgParticles[j].x, bgParticles[j].y);
+          bgCtx.stroke();
+        }
+      }
+    }
+  }
+
+  function animateBg() {
+    bgCtx.clearRect(0, 0, bgW, bgH);
+    bgParticles.forEach(p => { p.update(); p.draw(); });
+    connectBgParticles();
+    requestAnimationFrame(animateBg);
+  }
+  animateBg();
+})();
+
+// ===== CUSTOM CURSOR =====
+(function () {
+  const dot = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  if (!dot || !ring) return;
+
+  // Skip on touch devices (no real mouse)
+  if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) return;
+
+  let mx = 0, my = 0;
+  let rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mx = e.clientX;
+    my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
+  });
+
+  function animateCursorRing() {
+    rx += (mx - rx) * 0.15;
+    ry += (my - ry) * 0.15;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateCursorRing);
+  }
+  animateCursorRing();
+
+  // Grow ring on hoverable elements
+  const hoverables = document.querySelectorAll('a, button, .btn, .nav-link, .card, input, textarea');
+  hoverables.forEach((el) => {
+    el.addEventListener('mouseenter', () => ring.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('cursor-hover'));
+  });
+})();
