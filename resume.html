@@ -16,10 +16,11 @@
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="animations.css" />
 <link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" href="bot/style.css">
 
 <style>
   .cv-container {
-    background-color: #0a0a0a;
+    background-color: rgba(10, 10, 10, 0.4);
     padding: 80px 20px;
     min-height: 100vh;
   }
@@ -250,9 +251,11 @@
                 <span>2025</span>
               </div>
               <div class="cv-item-desc">
-                • WordPress Development: Built fast, mobile-responsive websites using custom themes and plugins.<br>
-                • AI Tools & Automation: Accelerated dev workflows with Cursor AI and integrated smart chatbots.<br>
-                • SEO & Optimization: Applied digital marketing strategies to boost search rankings.
+                • Built responsive web applications using HTML, CSS, JavaScript, React, Bootstrap, and WordPress.<br>
+                • Developed AI applications and chatbots with Python, LangChain, Groq, and Supabase.<br>
+                • Created and deployed projects in e-commerce, AI agents, chatbots, and portfolios.
+                • Applied SEO fundamentals to personal projects.
+
               </div>
             </div>
           </div>
@@ -407,17 +410,8 @@
 
     </main>
 
-    <!-- FOOTER -->
-    <div id="footer-container"></div>
-
-    <script>
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-        })
-        .catch(error => console.log('Footer not found:', error));
-    </script>
+    <!-- FOOTER (loaded via footer.js - works on file:// too, no fetch/CORS issue) -->
+    <script src="footer.js"></script>
 
 <script src="script.js" defer></script>
 <script src="animations.js"></script>
