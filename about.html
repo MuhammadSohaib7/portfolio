@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Title & Basic SEO -->
+<title>About | Muhammad Sohaib - Web Developer & AI Developer</title>
+<meta name="description" content="About Muhammad Sohaib - Full-Stack Web Developer & AI Enthusiast from Pakistan. Learn about my journey, expertise, and passion." />
+<meta name="keywords" content="About, Muhammad Sohaib, Web Developer, AI Developer, Full-Stack" />
+<meta name="author" content="Muhammad Sohaib" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#000000" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="About | Muhammad Sohaib" />
+<meta property="og:description" content="Learn about Muhammad Sohaib's background, skills, and expertise" />
+<meta property="og:url" content="https://muhammadsohaib7.github.io/portfolio/about.html" />
+<meta property="og:type" content="website" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="animations.css" />
+<link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" href="bot/style.css">
+
+<style>
+/* ===== HERO SECTION ===== */
+.about-hero {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.4) 0%, rgba(22, 22, 22, 0.4) 100%);
+  padding: 120px 20px 80px;
+  border-bottom: 2px solid #ff0000;
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Subtle red glow */
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(255, 0, 0, 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+/* ===== HERO CONTENT ===== */
+.hero-content {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 !important;
+  margin-left: 70px !important;
+  padding: 0 !important;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ===== HERO PHOTO (clean replacement for the old broken markup) ===== */
+.hero-photo-wrap {
+  flex: 1;
+  min-width: 260px;
+  max-width: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-photo-wrap img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid #ff0000;
+  box-shadow: 0 20px 60px rgba(255, 0, 0, 0.2);
+  display: block;
+}
+
+/* ===== EYEBROW (Hello, I'm) ===== */
+.eyebrow {
+  color: #ff0000;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+  line-height: 1.2;
+}
+
+/* ===== HEADING (Muhammad Sohaib) ===== */
+.about-hero h1 {
+  color: #ffffff;
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  white-space: nowrap;       /* ✅ 1 LINE */
+}
+
+.about-hero h1 span {
+  color: #ff0000;
+}
+
+/* ===== SUBTITLE (Paragraph) ===== */
+.about-hero p,
+.subtitle {
+  color: #d1d5db;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 !important;
+  max-width: 550px;
+  font-weight: 400;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero-content {
+    margin-left: 50px !important;
+  }
+
+  .about-hero h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    margin-left: 30px !important;
+    max-width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+  }
+
+  .about-hero h1 {
+    font-size: 36px;
+    white-space: normal;      /* ✅ ALLOW WRAP */
+  }
+
+  .about-hero p,
+  .subtitle {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+
+/* ===== HEADING ===== */
+/* ===== HEADING (Muhammad Sohaib on NEW LINE) ===== */
+.about-hero h1 {
+  color: #ffffff;
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  max-width: 400px;          /* ✅ FORCE WRAP */
+  word-break: break-word;
+}
+
+.about-hero h1 span {
+  color: #ff0000;
+  display: block;            /* ✅ NEW LINE GUARANTEE */
+  margin-top: 5px;           /* ✅ SLIGHT SPACE */
+}
+
+/* ===== DESCRIPTION - NATURAL 3 LINES ===== */
+.about-hero p,
+.subtitle {
+  color: #d1d5db;
+  font-size: 16px;           /* ✅ FULL SIZE */
+  line-height: 1.65;         /* ✅ READABLE */
+  max-width: 1500px;          /* ✅ 5-6 WORDS PER LINE */
+  margin: 0 !important;
+  text-align: left;
+  font-weight: 500;
+  word-spacing: normal;
+  letter-spacing: 0.4px;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  .hero-content {
+    margin-left: 45px !important;
+  }
+
+  .about-hero h1 {
+    font-size: 48px;
+  }
+
+  .about-hero p {
+    font-size: 17px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 100px 20px 70px;
+    min-height: 480px;
+  }
+
+  .hero-content {
+    margin-left: 10px !important;
+  }
+
+  .about-hero h1 {
+    font-size: 42px;
+  }
+
+  .about-hero p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+  /* ===== STATS SECTION ===== */
+  .stats-bar {
+    background-color: rgba(10, 10, 10, 0.4);
+    padding: 60px 20px;
+    border-bottom: 1px solid #262626;
+  }
+
+  .stats-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    color: #ff0000;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .stat-label {
+    color: #9ca3af;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+ /* ===== ABOUT INTRO SECTION ===== */
+.about-intro {
+  background-color: rgba(10, 10, 10, 0.4);
+  padding: 120px 20px;
+}
+
+.intro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: start;       /* ✅ START ALIGN */
+}
+
+/* LEFT: TEXT FIRST */
+.intro-text {
+  order: 1;
+  grid-column: 1;
+  max-width: 650px;         /* ✅ PROPER WIDTH */
+}
+
+/* RIGHT: IMAGE SECOND */
+.intro-image {
+  order: 2;
+  grid-column: 2;
+  position: relative;
+  text-align: center;
+  margin-top: 20px;         /* ✅ SLIGHT TOP MARGIN */
+}
+
+.intro-image img {
+  width: 100%;
+  max-width: 380px;         /* ✅ SLIGHTLY SMALLER */
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid #ff0000;
+  box-shadow: 0 20px 60px rgba(255, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+.intro-image::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  border: 1px solid #ff0000;
+  border-radius: 12px;
+  opacity: 0.3;
+}
+
+/* ===== HEADING ===== */
+.intro-text h2 {
+  color: #ffffff;
+  font-size: 42px;          /* ✅ SLIGHTLY BIGGER */
+  font-weight: 700;
+  margin-bottom: 30px;      /* ✅ MORE SPACE */
+  line-height: 1.25;
+}
+
+.intro-text h2 span {
+  color: #ff0000;
+}
+
+/* ===== PARAGRAPHS ===== */
+.intro-text p {
+  color: #d1d5db;
+  font-size: 16px;          /* ✅ CONSISTENT */
+  line-height: 1.7;         /* ✅ BETTER SPACING */
+  margin-bottom: 25px;      /* ✅ CONSISTENT */
+  font-weight: 400;
+}
+
+/* ===== HIGHLIGHT BOX ===== */
+.intro-highlight {
+  background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
+  border-left: 4px solid #ff0000;
+  padding: 28px;            /* ✅ BETTER PADDING */
+  margin: 35px 0;           /* ✅ BETTER MARGINS */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.intro-highlight:hover {
+  border-left-color: #ff3b3b;
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.1);
+}
+
+.intro-highlight p {
+  color: #ffffff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;          /* ✅ READABLE */
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .intro-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .intro-text {
+    order: 1;
+    grid-column: 1;
+  }
+
+  .intro-image {
+    order: 2;
+    grid-column: 1;
+    margin-top: 0;
+  }
+
+  .intro-text h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-intro {
+    padding: 80px 20px;
+  }
+
+  .intro-container {
+    gap: 40px;
+  }
+
+  .intro-text {
+    max-width: 100%;
+  }
+
+  .intro-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+
+  .intro-image img {
+    max-width: 300px;
+  }
+
+  .intro-highlight {
+    padding: 20px;
+  }
+}
+  /* ===== EXPERTISE CARDS ===== */
+  .expertise-section {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.4) 0%, rgba(15, 15, 15, 0.4) 100%);
+    padding: 100px 20px;
+    border-top: 1px solid #262626;
+  }
+
+  .section-title {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  .expertise-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+
+  .expertise-card {
+    background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 50px 30px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .expertise-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.1), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .expertise-card:hover {
+    border-color: #ff0000;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(255, 0, 0, 0.15);
+  }
+
+  .expertise-card:hover::before {
+    left: 100%;
+  }
+
+  .expertise-icon {
+    font-size: 56px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .expertise-card h3 {
+    color: #ff0000;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .expertise-card p {
+    color: #d1d5db;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill-tag {
+    background-color: #0a0a0a;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* ===== EXPERIENCE TIMELINE ===== */
+  .experience-section {
+    background-color: rgba(10, 10, 10, 0.4);
+    padding: 100px 20px;
+  }
+
+  .timeline {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  .timeline-date {
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: right;
+    padding-top: 5px;
+  }
+
+  .timeline-content {
+    background-color: #161616;
+    border-left: 3px solid #ff0000;
+    padding: 30px;
+    border-radius: 4px;
+  }
+
+  .timeline-content h3 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .timeline-content p {
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ===== VISION SECTION ===== */
+  .vision-section {
+    background: linear-gradient(135deg, rgba(22, 22, 22, 0.4) 0%, rgba(10, 10, 10, 0.4) 100%);
+    padding: 100px 20px;
+    border-top: 1px solid #262626;
+    text-align: center;
+  }
+
+  .vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .vision-content h2 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .vision-content p {
+    color: #d1d5db;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cta-button:hover {
+    background-color: #ff3b3b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .about-hero h1 {
+      font-size: 36px;
+    }
+
+    .about-hero p {
+      font-size: 16px;
+    }
+
+    .intro-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .intro-text h2 {
+      font-size: 28px;
+    }
+
+    .expertise-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+      grid-template-columns: 100px 1fr;
+      gap: 20px;
+    }
+
+    .timeline-date {
+      font-size: 14px;
+    }
+
+    .section-title {
+      font-size: 28px;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+    <!-- Wavy Particle Background (site-wide) -->
+    <canvas id="bg-particles"></canvas>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <header class="site-header" id="top">
+        <nav class="navbar" id="navbar">
+<a href="index.html" class="logo">
+  <img src="logo_pic.png" class="logo">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO SECTION -->
+      <section class="about-hero">
+        <div class="hero-content">
+          <h1>Hello, I'm <span>Muhammad Sohaib</span></h1>
+          <p>I'm a Full-Stack Developer who builds and ships real projects — from e-commerce stores to AI chatbots. I care about numbers: load time, SEO score, response speed — not just how the code looks.</p>
+        </div>
+        <div class="hero-photo-wrap">
+          <img src="my_pic.png.png" alt="Muhammad Sohaib">
+        </div>
+      </section>
+      
+
+      <!-- STATS SECTION -->
+      <section class="stats-bar">
+        <div class="stats-container">
+          <div class="stat-item">
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Dedication</div>
+          </div>
+        </div>
+      </section>
+
+<!-- ABOUT INTRO WITH 3D HOLOGRAM VIDEO -->
+<section class="about-intro">
+  <!-- Left Side: Text Content -->
+  <div class="intro-text">
+    <h2>Building the <span>Future</span> of Web</h2>
+    <p>I've built full-stack apps like Luxora Skin (Next.js + Supabase, 1.8s load time, A+ SEO) and NOVA MART (React + Firebase, AI-powered recommendations, 95% uptime). My work covers frontend, backend, and AI — actual shipped projects, not just theory.</p>
+    
+    <div class="intro-highlight">
+      <p>💡 Every project I build gets measured — load time, performance score, uptime. If I can't show a number for it, I don't call it done.</p>
+    </div>
+
+    <p>From e-commerce platforms to an AI chatbot (Groq + LangChain) that's handled 10,000+ queries at 0.2s response time, to 3D interactive portfolios — I've built across all three and can show results for each.</p>
+  </div>
+
+  <!-- Right Side: Video Container -->
+  <div class="video-container">
+    <video autoplay loop muted playsinline>
+      <source src="apni-download-ki-hui-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<!-- INLINE CSS STYLING -->
+<style>
+.about-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 60px 8%;
+  background-color: rgba(11, 11, 11, 0.4);
+  min-height: 100vh;
+  box-sizing: border-box;
+  flex-direction: row-reverse; /* Yeh line video ko utha kar right side par phenk degi aur text left par aa jayega */
+}
+
+.intro-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.video-container {
+  flex: 1;
+  max-width: 500px;
+  height: 450px;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.08);
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: transparent;
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 968px) {
+  .about-intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .intro-text {
+    max-width: 100%;
+  }
+  .video-container {
+    max-width: 100%;
+    height: 350px;
+  }
+}
+</style>
+        
+
+      <!-- EXPERTISE SECTION -->
+      <section class="expertise-section">
+        <h2 class="section-title">Core Expertise</h2>
+        
+        <div class="expertise-grid">
+          
+          <!-- Card 1 -->
+          <div class="expertise-card">
+            <span class="expertise-icon">💻</span>
+            <h3>Full-Stack Development</h3>
+            <p>Building complete web applications from frontend to backend with modern technologies and best practices.</p>
+            <div class="skill-list">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Supabase</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="expertise-card">
+            <span class="expertise-icon">🤖</span>
+            <h3>AI & Chatbots</h3>
+            <p>Developing intelligent AI solutions and chatbots that automate processes and enhance user experiences.</p>
+            <div class="skill-list">
+              <span class="skill-tag">LangChain</span>
+              <span class="skill-tag">Groq API</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">NLP</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="expertise-card">
+            <span class="expertise-icon">✨</span>
+            <h3>Design & Animation</h3>
+            <p>Creating visually stunning interfaces with smooth animations and interactive 3D experiences.</p>
+            <div class="skill-list">
+              <span class="skill-tag">Spline</span>
+              <span class="skill-tag">Three.js</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">UI/UX</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+      <section class="experience-section">
+        <h2 class="section-title">My Journey</h2>
+        
+        <div class="timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-date">2020 - 2024</div>
+            <div class="timeline-content">
+              <h3>Full-Stack Development</h3>
+              <p>Built and deployed multiple full-stack applications using React, Next.js, Node.js, and modern databases. Specialized in creating scalable, performant solutions.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2022 - Present</div>
+            <div class="timeline-content">
+              <h3>AI & Chatbot Integration</h3>
+              <p>Explored and implemented AI technologies including LangChain, Groq, and custom chatbots. Created intelligent solutions that enhance user engagement.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2023 - Present</div>
+            <div class="timeline-content">
+              <h3>3D Web Experiences</h3>
+              <p>Developed interactive 3D animations and visual experiences using Spline and Three.js, bringing web design to the next level.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- VISION SECTION -->
+      <section class="vision-section">
+        <div class="vision-content">
+          <h2>Let's Create Something Amazing</h2>
+          <p>I'm always excited to take on new challenges and collaborate on projects that push boundaries. Whether you need a web application, AI solution, or innovative digital experience, let's work together to make it happen.</p>
+          <a href="contact.html" class="cta-button">Start Your Project</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER (loaded via footer.js - works on file:// too, no fetch/CORS issue) -->
+    <script src="footer.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script src="animations.js"></script>
+<script src="bot/script.js" defer></script>
+</body>
+</html>

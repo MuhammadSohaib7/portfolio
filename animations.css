@@ -1,70 +1,64 @@
-/* Additional layout and motion layer (non-destructive to existing styles). */
-
-/* Initial page-load stagger animations */
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* FULL PAGE CANVAS - FIXED POSITION */
+#bg-particles {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #0a0a0a !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
 }
 
-.nav-links li,
-.hero .headline,
-.hero .subtitle,
-.hero .cta-group {
-  opacity: 0;
+/* Ensure body doesn't have extra height */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  position: relative;
+  overflow-x: hidden;
 }
 
-.nav-links li {
-  animation: fadeSlideUp 0.5s ease forwards;
+html {
+  background-color: #0a0a0a;
 }
 
-.nav-links li:nth-child(1) { animation-delay: 0.05s; }
-.nav-links li:nth-child(2) { animation-delay: 0.1s; }
-.nav-links li:nth-child(3) { animation-delay: 0.15s; }
-.nav-links li:nth-child(4) { animation-delay: 0.2s; }
-.nav-links li:nth-child(5) { animation-delay: 0.25s; }
-
-.hero .headline {
-  animation: fadeSlideUp 0.65s ease 0.3s forwards;
+/* Content above canvas */
+header {
+  position: relative;
+  z-index: 100;
 }
 
-.hero .subtitle {
-  animation: fadeSlideUp 0.65s ease 0.45s forwards;
+main {
+  position: relative;
+  z-index: 10;
 }
 
-.hero .cta-group {
-  animation: fadeSlideUp 0.65s ease 0.6s forwards;
+footer {
+  position: relative;
+  z-index: 10;
 }
 
-/* Card interaction enhancement */
-.card,
-.skill,
-.ads-card {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+/* Cursor styling */
+#cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  transform: translate(-50%, -50%);
 }
 
-.card:hover,
-.skill:hover,
-.ads-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+#cursor-ring {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ff0000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
 }
-
-/* Scroll reveal base state */
-.scroll-reveal-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-  will-change: opacity, transform;
-}
-
-.scroll-reveal-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-

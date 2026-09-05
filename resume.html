@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Resume | Muhammad Sohaib - Full-Stack Developer & AI Specialist</title>
+<meta name="description" content="Resume of Muhammad Sohaib - Full-Stack Web Developer & AI Solutions Specialist" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="animations.css" />
+<link rel="icon" href="favicon.ico" />
+
+<style>
+  .cv-container {
+    background-color: #0a0a0a;
+    padding: 80px 20px;
+    min-height: 100vh;
+  }
+
+  .cv-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 60px;
+    box-shadow: 0 20px 60px rgba(255, 0, 0, 0.1);
+  }
+
+  .cv-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #ff0000;
+  }
+
+  .cv-header h1 {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .cv-header h1 span {
+    color: #ff0000;
+  }
+
+  .cv-header p {
+    color: #d1d5db;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .cv-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    color: #9ca3af;
+    font-size: 14px;
+  }
+
+  .cv-contact a {
+    color: #ff0000;
+    text-decoration: none;
+  }
+
+  .cv-section {
+    margin-bottom: 40px;
+  }
+
+  .cv-section h2 {
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #262626;
+    padding-bottom: 10px;
+  }
+
+  .cv-item {
+    margin-bottom: 25px;
+  }
+
+  .cv-item h3 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .cv-item-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #9ca3af;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .cv-item-desc {
+    color: #d1d5db;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .cv-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .cv-skill-group h4 {
+    color: #ff0000;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .cv-skill-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .cv-skill-list li {
+    color: #d1d5db;
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .download-btn {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 14px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .download-btn:hover {
+    background-color: #ff3b3b;
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 768px) {
+    .cv-wrapper {
+      padding: 30px;
+    }
+
+    .cv-header h1 {
+      font-size: 28px;
+    }
+
+    .cv-contact {
+      flex-direction: column;
+    }
+
+    .cv-skills {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+    <canvas id="bg-particles"></canvas>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <header class="site-header" id="top">
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="logo">
+              <img src="logo_pic.png" class="logo">
+            </a>
+            <button class="nav-toggle" id="navToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+      <!-- CV SECTION -->
+      <section class="cv-container">
+        <div class="cv-wrapper">
+          
+          <!-- HEADER -->
+          <div class="cv-header">
+            <h1>Muhammad <span>Sohaib</span></h1>
+            <p>Full-Stack Developer & AI Solutions Specialist</p>
+            <div class="cv-contact">
+              <a href="mailto:sohaibkhani662@gmail.com">sohaibkhani662@gmail.com</a>
+              <span>•</span>
+              <span>03480959802</span>
+              <span>•</span>
+              <span>Lakki Marwat, Pakistan</span>
+            </div>
+            <a href="Muhammad_Sohaib_Resume_2026-09-05.pdf" class="download-btn" download>⬇️ Download PDF Resume</a>
+          </div>
+
+          <!-- SUMMARY -->
+          <div class="cv-section">
+            <h2>Summary</h2>
+            <div class="cv-item-desc">
+              Web Developer & AI Solutions Specialist focused on building responsive web applications and practical AI-powered solutions. Experienced with modern frontend technologies, WordPress, AI agents, chatbots, and backend integrations. Skilled in combining user-focused interface design with AI technologies to develop functional and engaging digital products.
+            </div>
+          </div>
+
+          <!-- EXPERIENCE -->
+          <div class="cv-section">
+            <h2>Professional Experience</h2>
+            
+            <div class="cv-item">
+              <h3>Junior AI Developer (Projects)</h3>
+              <div class="cv-item-meta">
+                <span>Self-Employed / Independent Projects</span>
+                <span>10/2025 – 04/2026</span>
+              </div>
+              <div class="cv-item-desc">
+                • Building and debugging AI-integrated web solutions using modern frameworks like LangChain.<br>
+                • Developing lead-generation bots and automation scripts to streamline business workflows.
+              </div>
+            </div>
+
+            <div class="cv-item">
+              <h3>Web Developer & UI/UX Specialist</h3>
+              <div class="cv-item-meta">
+                <span>Freelance (Fiverr & Upwork)</span>
+                <span>2025</span>
+              </div>
+              <div class="cv-item-desc">
+                • WordPress Development: Built fast, mobile-responsive websites using custom themes and plugins.<br>
+                • AI Tools & Automation: Accelerated dev workflows with Cursor AI and integrated smart chatbots.<br>
+                • SEO & Optimization: Applied digital marketing strategies to boost search rankings.
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECTS -->
+          <div class="cv-section">
+            <h2>Projects</h2>
+            
+            <div class="cv-item">
+              <h3>Autonomous Resume Verifier | Micro1 Challenge</h3>
+              <div class="cv-item-meta">
+                <span>Python · Groq · Streamlit</span>
+                <span>02/2026 – 03/2026</span>
+              </div>
+              <div class="cv-item-desc">
+                • Core: Groq & Llama 3 agent detecting resume discrepancies automatically.<br>
+                • Impact: Boosted benchmark accuracy from 66% to 100%.<br>
+                • Deployment: Live Streamlit UI with real-time trajectory logging.
+              </div>
+            </div>
+
+            <div class="cv-item">
+              <h3>Interactive Developer Portfolio</h3>
+              <div class="cv-item-meta">
+                <span>HTML · CSS · JavaScript · Supabase</span>
+                <span>05/2024 – 06/2024</span>
+              </div>
+              <div class="cv-item-desc">
+                • Interactive UI: Animated, responsive portfolio with micro-interactions.<br>
+                • Smart Backend: Supabase-linked AI chatbot for real-time leads.<br>
+                • Production: Mobile-first, automated GitHub CI/CD deployment.
+              </div>
+            </div>
+
+            <div class="cv-item">
+              <h3>Nova Mart AI-Powered E-Commerce App</h3>
+              <div class="cv-item-meta">
+                <span>Next.js · React · Tailwind CSS · AI</span>
+                <span>02/2026 – 03/2026</span>
+              </div>
+              <div class="cv-item-desc">
+                • Full-Stack Storefront: Built multi-category store with Next.js and React.<br>
+                • Smart AI Agent: Integrated real-time chatbot for order tracking and support.<br>
+                • Optimized UX: Focused on fast loading and higher conversions.
+              </div>
+            </div>
+          </div>
+
+          <!-- SKILLS -->
+          <div class="cv-section">
+            <h2>Skills</h2>
+            <div class="cv-skills">
+              
+              <div class="cv-skill-group">
+                <h4>Frontend Development</h4>
+                <ul class="cv-skill-list">
+                  <li>• HTML5 & CSS3</li>
+                  <li>• JavaScript (ES6)</li>
+                  <li>• React & Next.js</li>
+                  <li>• Tailwind CSS</li>
+                  <li>• Responsive Design</li>
+                </ul>
+              </div>
+
+              <div class="cv-skill-group">
+                <h4>Backend & Database</h4>
+                <ul class="cv-skill-list">
+                  <li>• Node.js & Express</li>
+                  <li>• MongoDB</li>
+                  <li>• Supabase</li>
+                  <li>• REST APIs</li>
+                  <li>• Database Design</li>
+                </ul>
+              </div>
+
+              <div class="cv-skill-group">
+                <h4>AI & Automation</h4>
+                <ul class="cv-skill-list">
+                  <li>• AI Agent Development</li>
+                  <li>• LangChain</li>
+                  <li>• Python</li>
+                  <li>• Cursor AI</li>
+                  <li>• Automation Scripts</li>
+                </ul>
+              </div>
+
+              <div class="cv-skill-group">
+                <h4>CMS & Tools</h4>
+                <ul class="cv-skill-list">
+                  <li>• WordPress</li>
+                  <li>• Canva</li>
+                  <li>• UI/UX Principles</li>
+                  <li>• Git & GitHub</li>
+                  <li>• Vercel Deploy</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CERTIFICATES -->
+          <div class="cv-section">
+            <h2>Certificates</h2>
+            
+            <div class="cv-item">
+              <h3>Digital Marketing & SEO Certification</h3>
+              <div class="cv-item-meta">
+                <span>DigiSkills.pk</span>
+              </div>
+            </div>
+
+            <div class="cv-item">
+              <h3>Jr. AI Developer (Projects)</h3>
+              <div class="cv-item-meta">
+                <span>Micro1 (Apr 2026)</span>
+              </div>
+            </div>
+
+            <div class="cv-item">
+              <h3>WordPress & Wix Web Development</h3>
+              <div class="cv-item-meta">
+                <span>DigiSkills.pk</span>
+              </div>
+            </div>
+
+            <div class="cv-item">
+              <h3>AI & ML with Python</h3>
+              <div class="cv-item-meta">
+                <span>DigiSkills.pk</span>
+              </div>
+            </div>
+
+            <div class="cv-item">
+              <h3>Freelancing & Communication</h3>
+              <div class="cv-item-meta">
+                <span>DigiSkills.pk</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- LANGUAGES -->
+          <div class="cv-section">
+            <h2>Languages</h2>
+            <div class="cv-item-desc">
+              <strong>English</strong> (Fluent) • <strong>Urdu</strong> (Native) • <strong>Pashto</strong> (Native)
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-container"></div>
+
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => console.log('Footer not found:', error));
+    </script>
+
+<script src="script.js" defer></script>
+<script src="animations.js"></script>
+<script src="bot/script.js" defer></script>
+</body>
+</html>

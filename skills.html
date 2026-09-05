@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Title & Basic SEO -->
+<title>Skills | Muhammad Sohaib - Web Developer & AI Developer</title>
+<meta name="description" content="Technical skills and expertise of Muhammad Sohaib. HTML, CSS, JavaScript, Bootstrap, WordPress, AI & Chatbots, Digital Marketing." />
+<meta name="keywords" content="Skills, Web Development, AI Development, JavaScript, React, Node.js, Python" />
+<meta name="author" content="Muhammad Sohaib" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#000000" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Skills | Muhammad Sohaib" />
+<meta property="og:description" content="Technical expertise and skill breakdown" />
+<meta property="og:url" content="https://muhammadsohaib7.github.io/portfolio/skills.html" />
+<meta property="og:type" content="website" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="animations.css" />
+<link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" href="bot/style.css">
+
+<style>
+  /* ===== HERO SECTION ===== */
+.skills-hero {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.4) 0%, rgba(22, 22, 22, 0.4) 100%);
+  padding: 120px 20px 80px;
+  border-bottom: 2px solid #ff0000;
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.skills-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.skills-hero .hero-content {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 !important;
+  margin-left: 70px !important;
+  padding: 0 !important;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skills-hero h1 {
+  color: #ffffff;
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.skills-hero h1 span {
+  color: #ff0000;
+}
+
+.skills-hero p {
+  color: #d1d5db;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 !important;
+}
+  /* ===== SKILLS GRID WITH PROGRESS ===== */
+  .skills-section {
+    background-color: rgba(10, 10, 10, 0.4);
+    padding: 90px 20px;
+  }
+
+  .section-title {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .skills-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .skill-item {
+    margin-bottom: 0;
+    background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
+    border: 1px solid #262626;
+    border-radius: 10px;
+    padding: 20px 22px;
+    transition: all 0.3s ease;
+  }
+
+  .skill-item:hover {
+    border-color: #ff0000;
+    transform: translateX(5px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
+  }
+
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .skill-name {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .skill-percentage {
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .skill-bar-bg {
+    height: 6px;
+    background-color: #262626;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .skill-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000 0%, #ff3b3b 100%);
+    border-radius: 10px;
+    transition: width 0.6s ease;
+    animation: fillProgress 0.8s ease forwards;
+  }
+
+  @keyframes fillProgress {
+    from {
+      width: 0%;
+    }
+  }
+
+  /* ===== TECH STACK SECTION ===== */
+  .tech-stack-section {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.4) 0%, rgba(15, 15, 15, 0.4) 100%);
+    padding: 100px 20px;
+    border-top: 1px solid #262626;
+  }
+
+  .tech-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+  }
+
+  .tech-card {
+    background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 40px 30px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tech-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ff0000, transparent);
+    transition: left 0.6s ease;
+  }
+
+  .tech-card:hover {
+    border-color: #ff0000;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(255, 0, 0, 0.15);
+  }
+
+  .tech-card:hover::before {
+    left: 100%;
+  }
+
+  .tech-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .tech-card h3 {
+    color: #ff0000;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  .tech-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tech-list li {
+    color: #d1d5db;
+    font-size: 14px;
+    line-height: 2;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .tech-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ff0000;
+    font-weight: bold;
+  }
+
+  /* ===== EXPERTISE MATRIX ===== */
+  .expertise-section {
+    background-color: rgba(10, 10, 10, 0.4);
+    padding: 100px 20px;
+  }
+
+  .expertise-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 60px;
+  }
+
+  .expertise-box {
+    background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .expertise-box:hover {
+    border-color: #ff0000;
+    transform: scale(1.05);
+  }
+
+  .expertise-level {
+    color: #ff0000;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .expertise-label {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .expertise-desc {
+    color: #9ca3af;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .skills-hero .hero-content {
+      margin-left: 50px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .skills-hero .hero-content {
+      margin-left: 30px !important;
+      max-width: 100%;
+    }
+
+    .skills-hero h1 {
+      font-size: 36px;
+    }
+
+    .skills-hero p {
+      font-size: 16px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 50px;
+    }
+
+    .skills-container {
+      grid-template-columns: 1fr;
+    }
+
+    .tech-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .expertise-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+    <!-- Wavy Particle Background -->
+    <canvas id="bg-particles"></canvas>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <header class="site-header" id="top">
+        <nav class="navbar" id="navbar">
+<a href="index.html" class="logo">
+  <img src="logo_pic.png" class="logo">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO SECTION -->
+      <section class="skills-hero">
+  <div class="hero-content">
+    <h1>Technical <span>Skills</span></h1>
+    <p>Comprehensive expertise across frontend, backend, AI, and digital technologies. Continuous learning and professional growth.</p>
+  </div>
+</section>
+
+
+      <!-- SKILLS WITH PROGRESS BARS -->
+      <section class="skills-section">
+        <h2 class="section-title">Proficiency Levels</h2>
+        
+        <div class="skills-container">
+          
+          <!-- Skill 1 -->
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">HTML, CSS & JavaScript</span>
+              <span class="skill-percentage">90%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">React & Next.js</span>
+              <span class="skill-percentage">85%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Node.js & Express</span>
+              <span class="skill-percentage">80%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width: 80%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 4 -->
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Python & AI/LangChain</span>
+              <span class="skill-percentage">95%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width: 95%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 5 -->
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">WordPress Development</span>
+              <span class="skill-percentage">88%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 6 -->
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Tailwind CSS & Design</span>
+              <span class="skill-percentage">87%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width: 87%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 7 -->
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Supabase & Firebase</span>
+              <span class="skill-percentage">82%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 8 -->
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">3D Animations (Spline)</span>
+              <span class="skill-percentage">85%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TECH STACK CATEGORIES -->
+      <section class="tech-stack-section">
+        <h2 class="section-title">Technology Stack</h2>
+        
+        <div class="tech-grid">
+          
+          <!-- Frontend -->
+          <div class="tech-card">
+            <span class="tech-icon">💻</span>
+            <h3>Frontend Development</h3>
+            <ul class="tech-list">
+              <li>HTML5 & Semantic Markup</li>
+              <li>CSS3 & Tailwind CSS</li>
+              <li>JavaScript (ES6+)</li>
+              <li>React & Next.js</li>
+              <li>Responsive Design</li>
+              <li>Web Performance</li>
+            </ul>
+          </div>
+
+          <!-- Backend -->
+          <div class="tech-card">
+            <span class="tech-icon">⚙️</span>
+            <h3>Backend & Databases</h3>
+            <ul class="tech-list">
+              <li>Node.js & Express</li>
+              <li>Python & FastAPI</li>
+              <li>Supabase & PostgreSQL</li>
+              <li>Firebase & Firestore</li>
+              <li>REST APIs Design</li>
+              <li>Server Architecture</li>
+            </ul>
+          </div>
+
+          <!-- AI & Advanced -->
+          <div class="tech-card">
+            <span class="tech-icon">🤖</span>
+            <h3>AI & Specializations</h3>
+            <ul class="tech-list">
+              <li>LangChain Integration</li>
+              <li>AI Chatbots & Agents</li>
+              <li>Groq & Gemini APIs</li>
+              <li>NLP & Automation</li>
+              <li>Spline 3D Design</li>
+              <li>Web Animations</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EXPERTISE LEVELS -->
+      <section class="expertise-section">
+        <h2 class="section-title">Expertise Breakdown</h2>
+        
+        <div class="expertise-grid">
+          
+          <div class="expertise-box">
+            <div class="expertise-level">Expert</div>
+            <div class="expertise-label">Frontend</div>
+            <div class="expertise-desc">Professional-level mastery in modern web interfaces</div>
+          </div>
+
+          <div class="expertise-box">
+            <div class="expertise-level">Advanced</div>
+            <div class="expertise-label">Backend</div>
+            <div class="expertise-desc">Strong server-side development and database skills</div>
+          </div>
+
+          <div class="expertise-box">
+            <div class="expertise-level">Expert</div>
+            <div class="expertise-label">AI & Automation</div>
+            <div class="expertise-desc">Cutting-edge AI integration and smart solutions</div>
+          </div>
+
+          <div class="expertise-box">
+            <div class="expertise-level">Professional</div>
+            <div class="expertise-label">Web Design</div>
+            <div class="expertise-desc">Modern UI/UX and visual design principles</div>
+          </div>
+
+          <div class="expertise-box">
+            <div class="expertise-level">Advanced</div>
+            <div class="expertise-label">3D Animation</div>
+            <div class="expertise-desc">Interactive 3D experiences and visualizations</div>
+          </div>
+
+          <div class="expertise-box">
+            <div class="expertise-level">Professional</div>
+            <div class="expertise-label">Digital Marketing</div>
+            <div class="expertise-desc">SEO, paid ads, and growth strategies</div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER (loaded via footer.js - works on file:// too, no fetch/CORS issue) -->
+    <script src="footer.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script src="animations.js"></script>
+<script src="bot/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Title & Basic SEO -->
+<title>Certificates | Muhammad Sohaib - Professional Credentials</title>
+<meta name="description" content="Muhammad Sohaib's professional certifications and credentials. DigiSkills, WordPress, and more." />
+<meta name="keywords" content="Certificates, Credentials, DigiSkills, WordPress, Professional" />
+<meta name="author" content="Muhammad Sohaib" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#000000" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Certificates | Muhammad Sohaib" />
+<meta property="og:description" content="Professional certifications and verified credentials" />
+<meta property="og:url" content="https://muhammadsohaib7.github.io/portfolio/certificates.html" />
+<meta property="og:type" content="website" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="animations.css" />
+<link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" href="bot/style.css">
+
+<style>
+  /* ===== HERO SECTION ===== */
+  .cert-hero {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.4) 0%, rgba(22, 22, 22, 0.4) 100%);
+    padding: 120px 20px 80px;
+    border-bottom: 2px solid #ff0000;
+    position: relative;
+    overflow: hidden;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .cert-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .cert-hero .hero-content {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 !important;
+    margin-left: 70px !important;
+    padding: 0 !important;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cert-hero h1 {
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .cert-hero h1 span {
+    color: #ff0000;
+  }
+
+  .cert-hero p {
+    color: #d1d5db;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 !important;
+  }
+
+  /* ===== CERTIFICATES GRID ===== */
+  .certificates-section {
+    background-color: rgba(10, 10, 10, 0.4);
+    padding: 100px 20px;
+  }
+
+  .section-title {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  .cert-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .cert-card {
+    background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
+    border: 1px solid #262626;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cert-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ff0000, transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+  }
+
+  .cert-card:hover {
+    border-color: #ff0000;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(255, 0, 0, 0.15);
+  }
+
+  .cert-card:hover::before {
+    left: 100%;
+  }
+
+  /* Certificate Image */
+  .cert-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #0a0a0a;
+    border-bottom: 1px solid #262626;
+  }
+
+  .cert-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+
+  .cert-card:hover .cert-image img {
+    transform: scale(1.05);
+  }
+
+  .cert-body {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cert-platform {
+    color: #ff0000;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .cert-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  .cert-status {
+    display: inline-block;
+    background-color: rgba(34, 197, 94, 0.1);
+    border: 1px solid #22c55e;
+    color: #22c55e;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    width: fit-content;
+  }
+
+  .cert-score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #262626;
+  }
+
+  .score-label {
+    color: #9ca3af;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .score-value {
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .cert-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  .cert-btn {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .cert-btn-primary {
+    background-color: #ff0000;
+    color: #ffffff;
+  }
+
+  .cert-btn-primary:hover {
+    background-color: #ff3b3b;
+    transform: translateY(-2px);
+  }
+
+  .cert-btn-secondary {
+    background-color: transparent;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+  }
+
+  .cert-btn-secondary:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+  }
+
+  /* ===== STATS SECTION ===== */
+  .stats-section {
+    background: linear-gradient(135deg, rgba(22, 22, 22, 0.4) 0%, rgba(10, 10, 10, 0.4) 100%);
+    padding: 80px 20px;
+    border-top: 1px solid #262626;
+  }
+
+  .stats-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+  }
+
+  .stat-box {
+    padding: 30px;
+    background-color: rgba(10, 10, 10, 0.5);
+    border: 1px solid #262626;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .stat-box:hover {
+    border-color: #ff0000;
+  }
+
+  .stat-number {
+    color: #ff0000;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .stat-text {
+    color: #9ca3af;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ===== CTA SECTION ===== */
+  .cert-cta {
+    background-color: #161616;
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  .cta-content p {
+    color: #d1d5db;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+
+  .cta-button:hover {
+    background-color: #ff3b3b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+  }
+
+  .cta-button.outline {
+    background-color: transparent;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+  }
+
+  .cta-button.outline:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .cert-hero .hero-content {
+      margin-left: 50px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cert-hero .hero-content {
+      margin-left: 30px !important;
+      max-width: 100%;
+    }
+
+    .cert-hero h1 {
+      font-size: 36px;
+    }
+
+    .cert-hero p {
+      font-size: 16px;
+    }
+
+    .cert-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 50px;
+    }
+
+    .stats-container {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .cert-image {
+      height: 150px;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+    <!-- Wavy Particle Background (site-wide) -->
+    <canvas id="bg-particles"></canvas>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <header class="site-header" id="top">
+        <nav class="navbar" id="navbar">
+<a href="index.html" class="logo">
+  <img src="logo_pic.png" class="logo">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO SECTION -->
+      <section class="cert-hero">
+        <div class="hero-content">
+          <h1>Professional <span>Certifications</span></h1>
+          <p>Verified credentials and professional certifications showcasing my commitment to continuous learning and expertise in cutting-edge technologies.</p>
+        </div>
+      </section>
+
+      <!-- CERTIFICATES SECTION -->
+<section class="certificates-section">
+  <h2 class="section-title">My Certificates</h2>
+  
+  <div class="cert-grid">
+    
+    <!-- Certificate 1: AI using Python -->
+    <div class="cert-card">
+      <div class="cert-image">
+        <img src="certificates/python.jpg" alt="AI using Python Certificate">
+      </div>
+      <div class="cert-body">
+        <div class="cert-platform">DigiSkills (DSTP 3.0)</div>
+        <h3 class="cert-title">AI using Python</h3>
+        <div class="cert-status">✓ Completed</div>
+        <div class="cert-score">
+          <span class="score-label">Score</span>
+          <span class="score-value">100%</span>
+        </div>
+        <div class="cert-buttons">
+          <a href="certificates/python.pdf" target="_blank" class="cert-btn cert-btn-primary">View PDF</a>
+          <a href="https://lms.digiskills.pk/verify" target="_blank" class="cert-btn cert-btn-secondary">Verify</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate 2: UI/UX & Webflow -->
+    <div class="cert-card">
+      <div class="cert-image">
+        <img src="certificates/uiux_webflow.jpg" alt="UI/UX & Webflow Certificate">
+      </div>
+      <div class="cert-body">
+        <div class="cert-platform">DigiSkills (DSTP 3.0)</div>
+        <h3 class="cert-title">UI/UX & Webflow</h3>
+        <div class="cert-status">✓ Completed</div>
+        <div class="cert-score">
+          <span class="score-label">Score</span>
+          <span class="score-value">80%</span>
+        </div>
+        <div class="cert-buttons">
+          <a href="certificates/uiux_webflow.pdf" target="_blank" class="cert-btn cert-btn-primary">View PDF</a>
+          <a href="https://lms.digiskills.pk/verify" target="_blank" class="cert-btn cert-btn-secondary">Verify</a>
+        </div>
+      </div>
+    </div>
+    <!-- Certificate: Micro1 Certified -->
+<div class="cert-card">
+  <div class="cert-image">
+    <img src="certificates/micro1_certification.jpg" alt="Micro1 Junior AI Developer Certification">
+  </div>
+  <div class="cert-body">
+    <div class="cert-platform">Micro1</div>
+    <h3 class="cert-title">Junior AI Developer (Projects)</h3>
+    <div class="cert-status">✓ Certified</div>
+    <div class="cert-score">
+      <span class="score-label">Status</span>
+      <span class="score-value">Verified ✓</span>
+    </div>
+    <div class="cert-buttons">
+      <a href="certificates/micro1_certification.pdf" target="_blank" class="cert-btn cert-btn-primary">View PDF</a>
+      <a href="https://micro1.aigateway.com/verify" target="_blank" class="cert-btn cert-btn-secondary">Verify</a>
+    </div>
+  </div>
+</div>
+    
+
+    <!-- Certificate 3: Communication & Soft Skills -->
+    <div class="cert-card">
+      <div class="cert-image">
+        <img src="certificates/communication_soft_skills.jpg" alt="Communication & Soft Skills Certificate">
+      </div>
+      <div class="cert-body">
+        <div class="cert-platform">DigiSkills (DSTP 3.0)</div>
+        <h3 class="cert-title">Communication & Soft Skills</h3>
+        <div class="cert-status">✓ Completed</div>
+        <div class="cert-score">
+          <span class="score-label">Score</span>
+          <span class="score-value">51%</span>
+        </div>
+        <div class="cert-buttons">
+          <a href="certificates/communication_soft_skills.pdf" target="_blank" class="cert-btn cert-btn-primary">View PDF</a>
+          <a href="https://lms.digiskills.pk/verify" target="_blank" class="cert-btn cert-btn-secondary">Verify</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate 4: SEO -->
+    <div class="cert-card">
+      <div class="cert-image">
+        <img src="certificates/seo.jpg" alt="SEO Certificate">
+      </div>
+      <div class="cert-body">
+        <div class="cert-platform">DigiSkills (DSTP 3.0)</div>
+        <h3 class="cert-title">SEO (Search Engine Optimization)</h3>
+        <div class="cert-status">✓ Completed</div>
+        <div class="cert-score">
+          <span class="score-label">Score</span>
+          <span class="score-value">71%</span>
+        </div>
+        <div class="cert-buttons">
+          <a href="certificates/seo.pdf" target="_blank" class="cert-btn cert-btn-primary">View PDF</a>
+          <a href="https://lms.digiskills.pk/verify" target="_blank" class="cert-btn cert-btn-secondary">Verify</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate 5: Graphic Design -->
+    <div class="cert-card">
+      <div class="cert-image">
+        <img src="certificates/graphic_design.jpg" alt="Graphic Design Certificate">
+      </div>
+      <div class="cert-body">
+        <div class="cert-platform">DigiSkills (DSTP 2.0)</div>
+        <h3 class="cert-title">Graphic Design</h3>
+        <div class="cert-status">✓ Completed</div>
+        <div class="cert-score">
+          <span class="score-label">Score</span>
+          <span class="score-value">85%</span>
+        </div>
+        <div class="cert-buttons">
+          <a href="certificates/graphic_design.pdf" target="_blank" class="cert-btn cert-btn-primary">View PDF</a>
+          <a href="https://lms.digiskills.pk/verify" target="_blank" class="cert-btn cert-btn-secondary">Verify</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate 6: Affiliate Marketing -->
+    <div class="cert-card">
+      <div class="cert-image">
+        <img src="certificates/affiliate_marketing.jpg" alt="Affiliate Marketing Certificate">
+      </div>
+      <div class="cert-body">
+        <div class="cert-platform">DigiSkills (DSTP 2.0)</div>
+        <h3 class="cert-title">Affiliate Marketing</h3>
+        <div class="cert-status">✓ Completed</div>
+        <div class="cert-score">
+          <span class="score-label">Score</span>
+          <span class="score-value">85%</span>
+        </div>
+        <div class="cert-buttons">
+          <a href="certificates/affiliate_marketing.pdf" target="_blank" class="cert-btn cert-btn-primary">View PDF</a>
+          <a href="https://lms.digiskills.pk/verify" target="_blank" class="cert-btn cert-btn-secondary">Verify</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate 7: Freelancing -->
+    <div class="cert-card">
+      <div class="cert-image">
+        <img src="certificates/freelancing.jpg" alt="Freelancing Certificate">
+      </div>
+      <div class="cert-body">
+        <div class="cert-platform">DigiSkills (DSTP 2.0)</div>
+        <h3 class="cert-title">Freelancing</h3>
+        <div class="cert-status">✓ Completed</div>
+        <div class="cert-score">
+          <span class="score-label">Score</span>
+          <span class="score-value">68%</span>
+        </div>
+        <div class="cert-buttons">
+          <a href="certificates/freelancing.pdf" target="_blank" class="cert-btn cert-btn-primary">View PDF</a>
+          <a href="https://lms.digiskills.pk/verify" target="_blank" class="cert-btn cert-btn-secondary">Verify</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate 8: Digital Marketing -->
+    <div class="cert-card">
+      <div class="cert-image">
+        <img src="certificates/digital_marketing.jpg" alt="Digital Marketing Certificate">
+      </div>
+      <div class="cert-body">
+        <div class="cert-platform">DigiSkills (DSTP 2.0)</div>
+        <h3 class="cert-title">Digital Marketing</h3>
+        <div class="cert-status">✓ Completed</div>
+        <div class="cert-score">
+          <span class="score-label">Score</span>
+          <span class="score-value">79%</span>
+        </div>
+        <div class="cert-buttons">
+          <a href="certificates/digital_marketing.pdf" target="_blank" class="cert-btn cert-btn-primary">View PDF</a>
+          <a href="https://lms.digiskills.pk/verify" target="_blank" class="cert-btn cert-btn-secondary">Verify</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate 9: WordPress -->
+    <div class="cert-card">
+      <div class="cert-image">
+        <img src="certificates/wordpress.jpg" alt="WordPress Certificate">
+      </div>
+      <div class="cert-body">
+        <div class="cert-platform">Professional Certification</div>
+        <h3 class="cert-title">WordPress Development</h3>
+        <div class="cert-status">✓ Completed</div>
+        <div class="cert-score">
+          <span class="score-label">Expertise</span>
+          <span class="score-value">Expert</span>
+        </div>
+        <div class="cert-buttons">
+          <a href="certificates/wordpress.pdf" target="_blank" class="cert-btn cert-btn-primary">View PDF</a>
+          <a href="#" class="cert-btn cert-btn-secondary">Details</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+      <!-- STATS SECTION -->
+      <section class="stats-section">
+        <div class="stats-container">
+          
+          <div class="stat-box">
+            <div class="stat-number">9</div>
+            <div class="stat-text">Professional Certificates</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number">100%</div>
+            <div class="stat-text">Completion Rate</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number">83%</div>
+            <div class="stat-text">Average Score</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="cert-cta">
+        <div class="cta-content">
+          <h2>Verified Professional Growth</h2>
+          <p>These certifications represent my commitment to continuous learning and staying updated with the latest industry standards. Each credential has been earned through rigorous training and assessment.</p>
+          <div>
+            <a href="projects.html" class="cta-button">View My Projects</a>
+            <a href="contact.html" class="cta-button outline">Get In Touch</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER (loaded via footer.js - works on file:// too, no fetch/CORS issue) -->
+    <script src="footer.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script src="animations.js"></script>
+<script src="bot/script.js" defer></script>
+</body>
+</html>

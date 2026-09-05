@@ -41,15 +41,17 @@
 
     <header class="site-header" id="top">
         <nav class="navbar" id="navbar">
-<a href="#home" class="logo">
+<a href="index.html" class="logo">
   <img src="logo_pic.png" class="logo">
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -63,14 +65,14 @@
     <div class="hero-content">
       <p class="eyebrow">Web Developer & AI Developer</p>
       <h1 class="headline">Muhammad <span>Sohaib</span></h1>
-      <p class="subtitle">I craft clean, responsive, and performance-focused websites with a professional touch.</p>
+      <p class="subtitle">I build websites and AI tools that actually perform — a store site scoring 98/100 on performance, an e-commerce platform with a 1.8s load time and A+ SEO, and a chatbot answering in 0.2s.</p>
       <div class="cta-group">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <a href="projects.html" class="btn btn-primary">View Projects</a>
+        <a href="contact.html" class="btn btn-outline">Contact Me</a>
       </div>
     </div>
 
-    <!-- Right: Spline -->
+    <!-- Right: Spline 3D Animation -->
     <div class="hero-spline">
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.97/build/spline-viewer.js"></script>
 <spline-viewer url="https://prod.spline.design/IrPO4MsivYUAS5o6/scene.splinecode"></spline-viewer>
@@ -78,339 +80,183 @@
 
   </div>
 </section>
-</section>
 
-        <!-- About -->
-        <section class="section about scroll-reveal-section" id="about">
-            <div class="container grid two-col">
-                <div>
-                    <h2 class="section-title">About Me</h2>
-                    <p class="body-text">I am Muhammad Sohaib, a Full-Stack Web Developer and AI Enthusiast. I specialize in building modern, high-performance, and responsive web applications using React, Next.js, Node.js, Express.js, and Supabase.</p>
-                    <p class="body-text">I also have experience with HTML5, CSS3, JavaScript, and WordPress, enabling me to create scalable, user-friendly digital solutions. Alongside web development, I explore AI technologies to build intelligent applications that solve real-world problems and deliver meaningful user experiences.</p>
-                </div>
-                <div class="about-card">
-                    <ul class="about-list">
-                        <li><strong>Location:</strong> Remote / Open to opportunities</li>
-                        <li><strong>Email:</strong> <a href="mailto:sohaibkhani662@gmail.com">sohaibkhani662@gmail.com</a></li>
-                        <li><strong>Focus:</strong> Front-end, AI & Chatbots, Growing Back‑end</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-       <!-- Skills -->
-<section class="section skills scroll-reveal-section" id="skills">
-  
-  <!-- 3D Animation Canvas -->
-  <canvas id="skills-bg"></canvas>
-  
-  <div class="container" style="position:relative; z-index:1;">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">
-        <div class="skill-header">
-          <span>HTML, CSS, JavaScript</span>
-          <span class="skill-value">90%</span>
-        </div>
-        <div class="progress"><span style="--w:90%"></span></div>
-      </div>
-      <div class="skill">
-        <div class="skill-header">
-          <span>Bootstrap</span>
-          <span class="skill-value">85%</span>
-        </div>
-        <div class="progress"><span style="--w:85%"></span></div>
-      </div>
-      <div class="skill">
-        <div class="skill-header">
-          <span>WordPress</span>
-          <span class="skill-value">88%</span>
-        </div>
-        <div class="progress"><span style="--w:88%"></span></div>
-      </div>
-      <div class="skill">
-        <div class="skill-header">
-          <span>Canva</span>
-          <span class="skill-value">80%</span>
-        </div>
-        <div class="progress"><span style="--w:80%"></span></div>
-      </div>
-      <div class="skill">
-        <div class="skill-header">
-          <span>Digital Marketing</span>
-          <span class="skill-value">75%</span>
-        </div>
-        <div class="progress"><span style="--w:75%"></span></div>
-      </div>
-      <div class="skill">
-        <div class="skill-header">
-          <span>Back‑end Development (Learning)</span>
-          <span class="skill-value">50%</span>
-        </div>
-        <div class="progress"><span style="--w:50%"></span></div>
-      </div>
-    </div>
-    <div class="skill" style="margin-top: 25px;">
-      <div class="skill-header">
-        <span>AI & Chatbot Dev</span>
-        <span class="skill-value">95%</span>
-      </div>
-      <div class="progress"><span style="--w:95%"></span></div>
-    </div>
-  </div>
-
-</section>
-
-       <!-- Projects -->
-<section class="section projects scroll-reveal-section" id="projects">
+<!-- STATS SECTION -->
+<section class="section" style="background-color: rgba(10, 10, 10, 0.4); padding: 60px 20px;">
   <div class="container">
-    <h2 class="section-title">Projects</h2>
-    <div class="cards">
-      <article class="card tilt-card">
-        <div class="card-shine"></div>
-        <div class="card-body">
-          <img src="images/store_website.png" alt="WordPress Project" class="project-img">
-          <h3>Store Website</h3>
-          <p>A modern store website built using HTML, CSS, and JAVASCRIPT. Clean UI and responsive layout.</p>
-        </div>
-        <div class="card-footer">
-          <a href="https://muhammadsohaib7.github.io/store-site/" target="_blank" class="btn btn-small">View</a>
-        </div>
-      </article>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+      
+      <div style="text-align: center;">
+        <h3 style="color: #ff0000; font-size: 40px; font-weight: 700; margin-bottom: 10px;">5+</h3>
+        <p style="color: #d1d5db; font-size: 16px;">Projects Completed</p>
+      </div>
 
-      <article class="card tilt-card">
-        <div class="card-shine"></div>
-        <div class="card-body">
-          <img src="images/wordpress.png" alt="WordPress Project" class="project-img">
-          <h3>WordPress Store Website</h3>
-          <p>WordPress theme customization and performance optimization hosted on pantheon.</p>
-        </div>
-        <div class="card-footer">
-          <a href="https://dev-muhammadsohaib.pantheonsite.io/?page_id=26" class="btn btn-small" target="_blank">View</a>
-        </div>
-      </article>
+      <div style="text-align: center;">
+        <h3 style="color: #ff0000; font-size: 40px; font-weight: 700; margin-bottom: 10px;">10+</h3>
+        <p style="color: #d1d5db; font-size: 16px;">Technologies</p>
+      </div>
 
-      <article class="card">
-                        <div class="card-body">
-                          <img src="images/luxsora_skin.png" alt="WordPress Project" class="project-img">
-                            <h3>Luxora Skin — E-commerce Store</h3>
-                            <p>A full-stack skincare e-commerce store with product catalog, cart, and admin panel.
-                                Tech Next.js, Node.js, Express, Supabase.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://luxora-skin-frontend.vercel.app" target="_blank" class="btn btn-small">View</a>
-                        </div>
-                    </article>
+      <div style="text-align: center;">
+        <h3 style="color: #ff0000; font-size: 40px; font-weight: 700; margin-bottom: 10px;">100%</h3>
+        <p style="color: #d1d5db; font-size: 16px;">Quality Focused</p>
+      </div>
 
-      <article class="card tilt-card">
-        <div class="card-shine"></div>
-        <div class="card-body">
-          <img src="images/chatbot.png" alt="WordPress Project" class="project-img">
-          <h3>AI Smart Agent</h3>
-          <p>A professional AI chatbot built with Python and LangChain. Integrated with Groq and Supabase to capture leads and provide real-time intelligent responses.</p>
-        </div>
-        <div class="card-footer">
-          <a href="https://nexus-ai-agent-boti9zexyqnxdbx98ndu8f.streamlit.app/" class="btn btn-small" target="_blank">View</a>
-        </div>
-      </article>
     </div>
   </div>
 </section>
 
-        <!-- Ads Section-->
-         <section style="background-color: #0a0a0a; padding: 80px 20px; font-family: sans-serif; color: white;">
-    <style>
-        .ads-card {
-            background-color: #161616;
-            border: 1px solid #262626;
-            border-radius: 12px;
-            padding: 30px;
-            transition: all 0.4s ease;
-            cursor: pointer;
-        }
-        .ads-card:hover {
-            transform: translateY(-10px);
-            border-color: #ff0000;
-            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
-        }
-    </style>
-
-    <div style="max-width: 1100px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 10px;">Paid Ads & Funnel Strategy</h2>
-            <p style="color: #9ca3af; font-size: 16px;">Boosting ROI with Data-Driven Meta Campaigns</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-
-            <div class="ads-card">
-                <span style="background-color: #ff0000; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; text-transform: uppercase;">Demo Case Study</span>
-                <h3 style="font-size: 22px; margin: 20px 0 10px 0;">E-commerce Sales Campaign (Meta)</h3>
-                <p style="color: #9ca3af; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
-                    A complete funnel setup for a premium skincare brand, focusing on high-conversion targeting and creative testing.
-                </p>
-
-                <div style="border-bottom: 1px solid #262626; padding-bottom: 20px; margin-bottom: 20px;">
-                    <p style="font-size: 14px; margin: 5px 0; color: #d1d5db;"><span style="color: #ff0000;">✔</span> Audience: UK/USA (Luxury Goods)</p>
-                    <p style="font-size: 14px; margin: 5px 0; color: #d1d5db;"><span style="color: #ff0000;">✔</span> Strategy: Retargeting + LAL Audiences</p>
-                    <p style="font-size: 14px; margin: 5px 0; color: #d1d5db;"><span style="color: #ff0000;">✔</span> Tech: FB Pixel & Conversion API</p>
-                </div>
-
-                <div style="display: flex; justify-content: space-between; text-align: center;">
-                    <div>
-                        <p style="color: #ff0000; font-size: 20px; font-weight: bold; margin: 0;">3.2x</p>
-                        <p style="color: #6b7280; font-size: 10px; text-transform: uppercase;">Est. ROAS</p>
-                    </div>
-                    <div>
-                        <p style="color: #ff0000; font-size: 20px; font-weight: bold; margin: 0;">1.5%</p>
-                        <p style="color: #6b7280; font-size: 10px; text-transform: uppercase;">Avg. CTR</p>
-                    </div>
-                    <div>
-                        <p style="color: #ff0000; font-size: 20px; font-weight: bold; margin: 0;">$0.45</p>
-                        <p style="color: #6b7280; font-size: 10px; text-transform: uppercase;">CPC</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ads-card">
-                <h3 style="font-size: 22px; margin-bottom: 25px;">Ads Management Expertise</h3>
-
-                <div style="margin-bottom: 20px;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                        <span style="font-size: 14px; color: #d1d5db;">Facebook & Instagram Ads</span>
-                        <span style="font-size: 14px; color: #ff0000;">90%</span>
-                    </div>
-                    <div style="background-color: #262626; height: 8px; border-radius: 10px;">
-                        <div style="background-color: #ff0000; width: 90%; height: 100%; border-radius: 10px;"></div>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: 30px;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                        <span style="font-size: 14px; color: #d1d5db;">Conversion Funnels</span>
-                        <span style="font-size: 14px; color: #ff0000;">85%</span>
-                    </div>
-                    <div style="background-color: #262626; height: 8px; border-radius: 10px;">
-                        <div style="background-color: #ff0000; width: 85%; height: 100%; border-radius: 10px;"></div>
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                    <div style="background-color: #0a0a0a; border: 1px solid #262626; padding: 10px; border-radius: 8px; text-align: center; font-size: 12px; color: #9ca3af;">Meta Manager</div>
-                    <div style="background-color: #0a0a0a; border: 1px solid #262626; padding: 10px; border-radius: 8px; text-align: center; font-size: 12px; color: #9ca3af;">A/B Testing</div>
-                    <div style="background-color: #0a0a0a; border: 1px solid #262626; padding: 10px; border-radius: 8px; text-align: center; font-size: 12px; color: #9ca3af;">Pixel Setup</div>
-                    <div style="background-color: #0a0a0a; border: 1px solid #262626; padding: 10px; border-radius: 8px; text-align: center; font-size: 12px; color: #9ca3af;">Copywriting</div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-       <!-- Contact -->
-<section class="section contact scroll-reveal-section" id="contact">
-  <div class="container grid two-col">
+<!-- FEATURED PROJECTS SECTION -->
+<section class="section" style="background-color: rgba(10, 10, 10, 0.4); padding: 80px 20px;">
+  <div class="container">
+    <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">Featured Projects</h2>
     
-    <!-- Left Side -->
-    <div>
-      <h2 class="section-title">Contact</h2>
-      <p class="body-text">Have a project in mind or want to collaborate? Let's talk.</p>
-      <ul class="socials">
-        <li><a href="mailto:sohaibkhani662@gmail.com" aria-label="Email">✉️</a></li>
-        <li><a href="https://www.linkedin.com/in/muhammad-sohaib-0467262a1/" aria-label="LinkedIn">in</a></li>
-        <li><a href="https://github.com/MuhammadSohaib7" aria-label="GitHub">GH</a></li>
-      </ul>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+      
+      <!-- Project 1 -->
+      <article style="background-color: #161616; border: 1px solid #262626; border-radius: 12px; overflow: hidden; transition: all 0.3s ease;">
+        <img src="images/store_website.png" alt="Store Website" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 24px;">
+          <h3 style="color: #ffffff; font-size: 18px; margin-bottom: 10px; font-weight: 700;">Store Website</h3>
+          <p style="color: #9ca3af; font-size: 14px; margin-bottom: 20px;">Modern store built with HTML, CSS & JavaScript. Clean UI with responsive layout.</p>
+          <a href="projects.html" style="color: #ff0000; text-decoration: none; font-weight: 600; font-size: 14px;">View Project →</a>
+        </div>
+      </article>
 
-      <!-- Three.js Lightweight Animation -->
-      <canvas id="contact-canvas" style="
-        width: 100%;
-        height: 250px;
-        margin-top: 30px;
-        border-radius: 12px;
-        display: block;
-      "></canvas>
+      <!-- Project 2 -->
+      <article style="background-color: #161616; border: 1px solid #262626; border-radius: 12px; overflow: hidden; transition: all 0.3s ease;">
+        <img src="images/luxsora_skin.png" alt="Luxora Skin" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 24px;">
+          <h3 style="color: #ffffff; font-size: 18px; margin-bottom: 10px; font-weight: 700;">Luxora Skin E-commerce</h3>
+          <p style="color: #9ca3af; font-size: 14px; margin-bottom: 20px;">Full-stack skincare store with Next.js, Node.js & Supabase backend.</p>
+          <a href="projects.html" style="color: #ff0000; text-decoration: none; font-weight: 600; font-size: 14px;">View Project →</a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article style="background-color: #161616; border: 1px solid #262626; border-radius: 12px; overflow: hidden; transition: all 0.3s ease;">
+        <img src="images/nova-mart.png" alt="NOVA MART" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 24px;">
+          <h3 style="color: #ffffff; font-size: 18px; margin-bottom: 10px; font-weight: 700;">NOVA MART</h3>
+          <p style="color: #9ca3af; font-size: 14px; margin-bottom: 20px;">E-commerce with AI Agent integration for customer support & tracking.</p>
+          <a href="projects.html" style="color: #ff0000; text-decoration: none; font-weight: 600; font-size: 14px;">View Project →</a>
+        </div>
+      </article>
+
     </div>
 
-    <!-- Right Side: Form -->
-    <form action="https://formspree.io/f/xzdaqnrl" method="POST" class="contact-form">
-      <input type="hidden" name="_next" value="https://MuhammadSohaib7.github.io/portfolio/formsubmit.html">
-      
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your name" required />
-      </div>
-      
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="your@email.com" required />
-      </div>
-      
-      <div class="field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
-      </div>
-      
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
-
+    <div style="text-align: center; margin-top: 50px;">
+      <a href="projects.html" class="btn btn-primary">View All Projects</a>
+    </div>
   </div>
 </section>
-    <footer class="site-footer">
-        <div class="container">
-            <p>© <span id="year"></span> Muhammad Sohaib. All rights reserved.</p>
+
+<!-- SERVICES SECTION -->
+<section class="section" style="background-color: rgba(10, 10, 10, 0.4); padding: 80px 20px;">
+  <div class="container">
+    <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">What I Offer</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+      
+      <!-- Service 1 -->
+      <div style="background-color: #161616; border: 1px solid #262626; border-radius: 12px; padding: 40px 30px; text-align: center;">
+        <div style="font-size: 50px; margin-bottom: 20px;">💻</div>
+        <h3 style="color: #ffffff; font-size: 20px; margin-bottom: 15px; font-weight: 700;">Web Development</h3>
+        <p style="color: #9ca3af; font-size: 14px; line-height: 1.6;">
+          Full-stack web applications with React, Next.js, Node.js, and modern frontend technologies.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div style="background-color: #161616; border: 1px solid #262626; border-radius: 12px; padding: 40px 30px; text-align: center;">
+        <div style="font-size: 50px; margin-bottom: 20px;">🤖</div>
+        <h3 style="color: #ffffff; font-size: 20px; margin-bottom: 15px; font-weight: 700;">AI & Chatbots</h3>
+        <p style="color: #9ca3af; font-size: 14px; line-height: 1.6;">
+          Intelligent AI chatbots and agents using LangChain, Groq, and advanced NLP models.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div style="background-color: #161616; border: 1px solid #262626; border-radius: 12px; padding: 40px 30px; text-align: center;">
+        <div style="font-size: 50px; margin-bottom: 20px;">✨</div>
+        <h3 style="color: #ffffff; font-size: 20px; margin-bottom: 15px; font-weight: 700;">3D Animations</h3>
+        <p style="color: #9ca3af; font-size: 14px; line-height: 1.6;">
+          Eye-catching 3D animations and interactive experiences using Spline and Three.js.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE ME SECTION -->
+<section class="section" style="background-color: rgba(10, 10, 10, 0.4); padding: 80px 20px;">
+  <div class="container">
+    <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">Why Choose Me</h2>
+    
+    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+      
+      <!-- Reason 1 -->
+      <div>
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <div style="width: 50px; height: 50px; background-color: #ff0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+            <span style="color: #ffffff; font-size: 24px; font-weight: 700;">01</span>
+          </div>
+          <h3 style="color: #ffffff; font-size: 18px; font-weight: 700;">Expert Knowledge</h3>
         </div>
-    </footer>
+        <p style="color: #9ca3af; font-size: 14px; line-height: 1.7;">
+          4+ years combined experience in web development, AI integration, and modern technologies.
+        </p>
+      </div>
+
+      <!-- Reason 2 -->
+      <div>
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <div style="width: 50px; height: 50px; background-color: #ff0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+            <span style="color: #ffffff; font-size: 24px; font-weight: 700;">02</span>
+          </div>
+          <h3 style="color: #ffffff; font-size: 18px; font-weight: 700;">Fast Delivery</h3>
+        </div>
+        <p style="color: #9ca3af; font-size: 14px; line-height: 1.7;">
+          Efficient project management ensures timely delivery without compromising quality standards.
+        </p>
+      </div>
+
+      <!-- Reason 3 -->
+      <div>
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <div style="width: 50px; height: 50px; background-color: #ff0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+            <span style="color: #ffffff; font-size: 24px; font-weight: 700;">03</span>
+          </div>
+          <h3 style="color: #ffffff; font-size: 18px; font-weight: 700;">24/7 Support</h3>
+        </div>
+        <p style="color: #9ca3af; font-size: 14px; line-height: 1.7;">
+          Dedicated support and maintenance for all projects. Always available when you need help.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section" style="background-color: #161616; padding: 80px 20px; text-align: center;">
+  <div class="container">
+    <h2 style="color: #ffffff; font-size: 32px; margin-bottom: 20px; font-weight: 700;">Ready to Start Your Project?</h2>
+    <p style="color: #9ca3af; font-size: 16px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+      Let's work together to bring your ideas to life. Contact me today and let's create something amazing!
+    </p>
+    <a href="contact.html" class="btn btn-primary" style="display: inline-block;">Get In Touch</a>
+  </div>
+</section>
+
+    </main>
+
+    <!-- FOOTER (loaded via footer.js - works on file:// too, no fetch/CORS issue) -->
+    <script src="footer.js"></script>
 
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
-
-<!-- Spline Intro Overlay -->
-<div id="intro-overlay" style="display:none; position:fixed; top:0; left:0; 
-width:100%; height:100%; background:rgba(0,0,0,0.9); 
-z-index:9999; justify-content:center; align-items:center;">
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.97/build/spline-viewer.js"></script>
-  <spline-viewer 
-    url="https://prod.spline.design/bEuNdG041ehMuF0i/scene.splinecode"
-    background="transparent"
-    style="width:300px; height:300px; border-radius:50%;">
-  </spline-viewer>
-</div>
-
-<!-- Bot Launcher -->
-<div id="chatbot-launcher" onclick="toggleChatbot()">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
-    <path d="M12 2C6.477 2 2 6.119 2 11.2c0 2.414 1.011 4.607 2.684 6.224L3.05 21.35a.75.75 0 00.99.99l3.926-1.636A10.37 10.37 0 0012 20.4c5.523 0 10-4.119 10-9.2S17.523 2 12 2zm0 16.9a8.834 8.834 0 01-3.957-.93.75.75 0 00-.638-.046l-2.457 1.023 1.023-2.457a.75.75 0 00-.046-.638A7.702 7.702 0 013.5 11.2C3.5 7.224 7.306 4 12 4s8.5 3.224 8.5 7.2-3.806 7.2-8.5 7.2z"/>
-  </svg>
-</div>
-
-<!-- Chatbot Box -->
-<div id="chatbot-box" class="chatbot-hidden">
-  <div class="chatbot-header">
-    <div class="bot-info">
-      <span class="bot-status-dot"></span>
-      <h4>AI Assistant</h4>
-    </div>
-    <button class="close-btn" onclick="toggleChatbot()">&times;</button>
-  </div>
-
-  <div id="chatbot-messages" class="chatbot-messages">
-    <div class="message bot-message">
-      Hi! I am Sohaib AI Assistant. How can I help you today?
-    </div>
-  </div>
-
-  <div class="chatbot-input-container">
-    <input type="text" id="chatbot-input" placeholder="Type a message..." 
-      onkeydown="if(event.key === 'Enter') sendMessage()">
-    <button id="chatbot-send-btn" onclick="sendMessage()">Send</button>
-  </div>
-</div>
-</div>
-</div>
-    <!-- <script src="script.js"></script> -->
-    <script src="animations.js"></script>
-    <script src="bot/script.js" defer></script>
+<script src="animations.js"></script>
+<script src="bot/script.js" defer></script>
 </body>
 </html>

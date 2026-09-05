@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Title & Basic SEO -->
+<title>Contact | Muhammad Sohaib - Let's Work Together</title>
+<meta name="description" content="Get in touch with Muhammad Sohaib. Email, phone, social links, and inquiry form available. Available for freelance and full-time opportunities." />
+<meta name="keywords" content="Contact, Muhammad Sohaib, Hire, Freelance, Web Developer, AI Developer" />
+<meta name="author" content="Muhammad Sohaib" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#000000" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Contact | Muhammad Sohaib" />
+<meta property="og:description" content="Let's create something amazing together" />
+<meta property="og:url" content="https://muhammadsohaib7.github.io/portfolio/contact.html" />
+<meta property="og:type" content="website" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="animations.css" />
+<link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" href="bot/style.css">
+
+<style>
+  /* ===== HERO SECTION ===== */
+  .contact-hero {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.4) 0%, rgba(22, 22, 22, 0.4) 100%);
+    padding: 120px 20px 80px;
+    border-bottom: 2px solid #ff0000;
+    position: relative;
+    overflow: hidden;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .contact-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .contact-hero .hero-content {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 !important;
+    margin-left: 55px !important;
+    padding: 0 !important;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-hero h1 {
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .contact-hero h1 span {
+    color: #ff0000;
+  }
+
+  .contact-hero p {
+    color: #d1d5db;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 !important;
+  }
+
+  /* ===== MAIN CONTACT SECTION ===== */
+  .contact-section {
+    background-color: rgba(10, 10, 10, 0.4);
+    padding: 100px 20px;
+  }
+
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* LEFT SIDE - INFO CARDS */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .info-card {
+    background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 40px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .info-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #ff0000 0%, transparent 100%);
+    transition: all 0.3s ease;
+  }
+
+  .info-card:hover {
+    border-color: #ff0000;
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
+  }
+
+  .info-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .info-label {
+    color: #ff0000;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+  }
+
+  .info-title {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .info-text {
+    color: #d1d5db;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .info-text a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .info-text a:hover {
+    color: #ff3b3b;
+    text-decoration: underline;
+  }
+
+  /* SOCIAL LINKS */
+  .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .social-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #161616;
+    border: 1px solid #262626;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff0000;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .social-btn:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    transform: translateY(-5px);
+    border-color: #ff0000;
+  }
+
+  /* RIGHT SIDE - FORM */
+  .contact-form-container {
+    background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 50px;
+    position: relative;
+  }
+
+  .contact-form-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff0000 0%, transparent 100%);
+    border-radius: 12px 12px 0 0;
+  }
+
+  .form-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+
+  .form-label {
+    display: block;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #0a0a0a;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: #6b7280;
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-btn {
+    width: 100%;
+    padding: 16px 40px;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .form-btn:hover {
+    background-color: #ff3b3b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+  }
+
+  /* ===== RESPONSE TIME SECTION ===== */
+  .response-section {
+    background: linear-gradient(135deg, rgba(22, 22, 22, 0.4) 0%, rgba(10, 10, 10, 0.4) 100%);
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #262626;
+  }
+
+  .response-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .response-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .response-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .response-text {
+    color: #d1d5db;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* ===== FAQ SECTION ===== */
+  .faq-section {
+    background-color: rgba(10, 10, 10, 0.4);
+    padding: 100px 20px;
+  }
+
+  .section-title {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  .faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+  }
+
+  .faq-item {
+    background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    border-color: #ff0000;
+  }
+
+  .faq-q {
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .faq-a {
+    color: #d1d5db;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .contact-hero .hero-content {
+      margin-left: 45px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-hero .hero-content {
+      margin-left: 25px !important;
+      max-width: 100%;
+    }
+
+    .contact-hero h1 {
+      font-size: 36px;
+    }
+
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    .contact-form-container {
+      padding: 30px;
+    }
+
+    .section-title {
+      font-size: 28px;
+    }
+
+    .faq-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+    <!-- Wavy Particle Background -->
+    <canvas id="bg-particles"></canvas>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <header class="site-header" id="top">
+        <nav class="navbar" id="navbar">
+<a href="index.html" class="logo">
+  <img src="logo_pic.png" class="logo">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO SECTION -->
+      <section class="contact-hero">
+        <div class="hero-content">
+          <h1>Let's Work <span>Together</span></h1>
+          <p>Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing together!</p>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact-section">
+        <div class="contact-container">
+          
+          <!-- LEFT: CONTACT INFO -->
+          <div class="contact-info">
+            
+            <!-- Email Card -->
+            <div class="info-card">
+              <span class="info-icon">✉️</span>
+              <div class="info-label">Email</div>
+              <div class="info-title">Get In Touch</div>
+              <div class="info-text">
+                <a href="mailto:sohaibkhani662@gmail.com">sohaibkhani662@gmail.com</a>
+                <p style="margin-top: 8px; font-size: 12px; color: #6b7280;">Usually responds within 24 hours</p>
+              </div>
+            </div>
+
+            <!-- Location Card -->
+            <div class="info-card">
+              <span class="info-icon">📍</span>
+              <div class="info-label">Location</div>
+              <div class="info-title">Based In</div>
+              <div class="info-text">
+                Remote / Lahore, Pakistan
+                <p style="margin-top: 8px; font-size: 12px; color: #6b7280;">Available for remote work worldwide</p>
+              </div>
+            </div>
+
+            <!-- Availability Card -->
+            <div class="info-card">
+              <span class="info-icon">💼</span>
+              <div class="info-label">Availability</div>
+              <div class="info-title">Open For</div>
+              <div class="info-text">
+                Freelance • Full-time • Collaborations
+                <p style="margin-top: 8px; font-size: 12px; color: #6b7280;">Immediate start available</p>
+              </div>
+            </div>
+
+            <!-- Social Links Card -->
+            <div class="info-card">
+              <span class="info-icon">🔗</span>
+              <div class="info-label">Social</div>
+              <div class="info-title">Connect With Me</div>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/muhammad-sohaib-0467262a1/" target="_blank" class="social-btn" title="LinkedIn">in</a>
+                <a href="https://github.com/MuhammadSohaib7" target="_blank" class="social-btn" title="GitHub">GH</a>
+                <a href="mailto:sohaibkhani662@gmail.com" class="social-btn" title="Email">@</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: CONTACT FORM -->
+          <div class="contact-form-container">
+            <h2 class="form-title">
+              <span>📧</span> Send Message
+            </h2>
+            
+            <form action="https://formspree.io/f/xzdaqnrl" method="POST">
+              
+              <div class="form-group">
+                <label class="form-label">Your Name *</label>
+                <input type="text" name="name" class="form-input" placeholder="Muhammad Sohaib" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Your Email *</label>
+                <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Subject *</label>
+                <input type="text" name="subject" class="form-input" placeholder="Project Inquiry" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Your Message *</label>
+                <textarea name="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+              </div>
+
+              <button type="submit" class="form-btn">Send Message</button>
+              
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- RESPONSE TIME SECTION -->
+      <section class="response-section">
+        <div class="response-content">
+          <span class="response-icon">⚡</span>
+          <h2 class="response-title">Quick Response Guaranteed</h2>
+          <p class="response-text">I value your time and respond to all inquiries within 24 hours. Whether it's a question about services or a project proposal, I'll get back to you promptly with thoughtful feedback.</p>
+        </div>
+      </section>
+
+      <!-- FAQ SECTION -->
+      <section class="faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-container">
+          
+          <div class="faq-item">
+            <div class="faq-q">Q: What's your typical project turnaround time?</div>
+            <div class="faq-a">A: Project timelines vary based on complexity. Simple projects: 1-2 weeks. Medium: 3-4 weeks. Complex: 6-8 weeks or custom timeline.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Q: Do you offer maintenance after project delivery?</div>
+            <div class="faq-a">A: Yes! I provide post-launch support and maintenance packages. We can discuss ongoing updates and improvements based on your needs.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Q: What's your minimum project budget?</div>
+            <div class="faq-a">A: I work with projects of all sizes. Let's discuss your requirements and budget. I'll provide a custom quote that works for you.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Q: Can you work on existing projects?</div>
+            <div class="faq-a">A: Absolutely! I can take over existing projects, improve code quality, add features, or fix bugs. Portfolio projects welcome.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Q: Do you sign NDAs for confidential projects?</div>
+            <div class="faq-a">A: Yes, of course. I'm committed to maintaining confidentiality and can sign NDAs as required by your organization.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Q: What communication tools do you use?</div>
+            <div class="faq-a">A: I'm flexible with tools: Email, Slack, Discord, WhatsApp, Zoom calls. We'll use whatever works best for your team.</div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER (loaded via footer.js - works on file:// too, no fetch/CORS issue) -->
+    <script src="footer.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script src="animations.js"></script>
+<script src="bot/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+document.write(`
+<style>
+  @media (max-width: 900px) {
+    .footer-grid { grid-template-columns: 1fr 1fr !important; }
+  }
+  @media (max-width: 560px) {
+    .footer-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+<!-- PROFESSIONAL FOOTER -->
+<footer class="site-footer" style="background-color: #0a0a0a; border-top: 1px solid #262626; padding: 50px 20px 25px;">
+  <div class="container" style="max-width: 1100px; margin: 0 auto;">
+    
+    <!-- Footer Content -->
+    <div class="footer-grid" style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 30px; margin-bottom: 35px;">
+      
+      <!-- Brand Section -->
+      <div>
+        <h3 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 15px;">Muhammad Sohaib</h3>
+        <p style="color: #9ca3af; font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
+          Full-Stack Web Developer & AI Enthusiast. Building modern, high-performance web applications with cutting-edge technologies.
+        </p>
+        <div style="display: flex; gap: 12px;">
+          <a href="mailto:sohaibkhani662@gmail.com" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #161616; border: 1px solid #262626; border-radius: 50%; color: #ff0000; text-decoration: none; transition: all 0.3s ease;" title="Email">
+            &#9993;&#65039;
+          </a>
+          <a href="https://www.linkedin.com/in/muhammad-sohaib-0467262a1/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #161616; border: 1px solid #262626; border-radius: 50%; color: #ff0000; text-decoration: none; transition: all 0.3s ease; font-weight: bold;" title="LinkedIn">
+            in
+          </a>
+          <a href="https://github.com/MuhammadSohaib7" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #161616; border: 1px solid #262626; border-radius: 50%; color: #ff0000; text-decoration: none; transition: all 0.3s ease; font-weight: bold;" title="GitHub">
+            GH
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 style="color: #ffffff; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Quick Links</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 8px;">
+            <a href="index.html" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">Home</a>
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a href="about.html" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">About Me</a>
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a href="skills.html" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">Skills</a>
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a href="projects.html" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">Projects</a>
+          </li>
+          <li>
+            <a href="contact.html" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 style="color: #ffffff; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Services</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 8px;">
+            <a href="projects.html" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">Web Development</a>
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a href="projects.html" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">AI & Chatbots</a>
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a href="projects.html" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">3D Animations</a>
+          </li>
+          <li>
+            <a href="contact.html" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">Contact for Custom Work</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 style="color: #ffffff; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Contact Info</h3>
+        <div style="margin-bottom: 12px;">
+          <p style="color: #9ca3af; font-size: 12px; text-transform: uppercase; margin-bottom: 4px; font-weight: 600;">Email</p>
+          <a href="mailto:sohaibkhani662@gmail.com" style="color: #ff0000; text-decoration: none; font-size: 14px;">sohaibkhani662@gmail.com</a>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <p style="color: #9ca3af; font-size: 12px; text-transform: uppercase; margin-bottom: 4px; font-weight: 600;">Location</p>
+          <p style="color: #9ca3af; font-size: 14px; margin: 0;">Remote / Pakistan</p>
+        </div>
+        <div>
+          <p style="color: #9ca3af; font-size: 12px; text-transform: uppercase; margin-bottom: 4px; font-weight: 600;">Availability</p>
+          <p style="color: #d1d5db; font-size: 14px; margin: 0;">Available for freelance & full-time</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div style="border-top: 1px solid #262626; margin: 0 0 20px;"></div>
+
+    <!-- Footer Bottom -->
+    <div style="display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;">
+      
+      <!-- Copyright -->
+      <div>
+        <p style="color: #6b7280; font-size: 13px; margin: 0;">
+          &copy; <span id="year"></span> Muhammad Sohaib. All rights reserved. | Built with passion and modern technologies.
+        </p>
+      </div>
+
+      <!-- Footer Links -->
+      <div style="display: flex; gap: 20px;">
+        <a href="#top" style="color: #9ca3af; text-decoration: none; font-size: 13px; transition: all 0.3s ease;">&uarr; Back to Top</a>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+<!-- Bot Launcher -->
+<div id="chatbot-launcher" onclick="toggleChatbot()">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+    <path d="M12 2C6.477 2 2 6.119 2 11.2c0 2.414 1.011 4.607 2.684 6.224L3.05 21.35a.75.75 0 00.99.99l3.926-1.636A10.37 10.37 0 0012 20.4c5.523 0 10-4.119 10-9.2S17.523 2 12 2zm0 16.9a8.834 8.834 0 01-3.957-.93.75.75 0 00-.638-.046l-2.457 1.023 1.023-2.457a.75.75 0 00-.046-.638A7.702 7.702 0 013.5 11.2C3.5 7.224 7.306 4 12 4s8.5 3.224 8.5 7.2-3.806 7.2-8.5 7.2z"/>
+  </svg>
+</div>
+
+<!-- Intro Overlay (brief loading animation before chatbot opens) -->
+<div id="intro-overlay" style="display:none; position:fixed; inset:0; z-index:9998; background:rgba(10,10,10,0.75); align-items:center; justify-content:center; flex-direction:column; gap:16px;">
+  <div style="width:64px; height:64px; border-radius:50%; background:radial-gradient(circle, #ff3b3b 0%, #ff0000 60%, transparent 100%); box-shadow:0 0 40px rgba(255,0,0,0.6); animation: introOrbPulse 1s ease-in-out infinite;"></div>
+  <p style="color:#ffffff; font-size:14px; letter-spacing:0.5px; margin:0;">Waking up assistant...</p>
+</div>
+<style>
+  @keyframes introOrbPulse {
+    0%, 100% { transform: scale(0.85); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; }
+  }
+</style>
+
+<!-- Chatbot Box -->
+<div id="chatbot-box" class="chatbot-hidden">
+  <div class="chatbot-header">
+    <div class="bot-info">
+      <span class="bot-status-dot"></span>
+      <h4>AI Assistant</h4>
+    </div>
+    <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+  </div>
+
+  <div id="chatbot-messages" class="chatbot-messages">
+    <div class="message bot-message">
+      Hi! I am Sohaib AI Assistant. How can I help you today?
+    </div>
+  </div>
+
+  <div class="chatbot-input-container">
+    <input type="text" id="chatbot-input" placeholder="Type a message..." 
+      onkeydown="if(event.key === 'Enter') sendMessage()">
+    <button id="chatbot-send-btn" onclick="sendMessage()">Send</button>
+  </div>
+</div>
+`);
+
+// Auto-update year after footer is written
+document.getElementById('year').textContent = new Date().getFullYear();
