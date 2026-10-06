@@ -1,0 +1,64 @@
+/* FULL PAGE CANVAS - FIXED POSITION */
+#bg-particles {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #0a0a0a !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Ensure body doesn't have extra height */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html {
+  background-color: #0a0a0a;
+}
+
+/* Content above canvas */
+header {
+  position: relative;
+  z-index: 100;
+}
+
+main {
+  position: relative;
+  z-index: 10;
+}
+
+footer {
+  position: relative;
+  z-index: 10;
+}
+
+/* Cursor styling */
+#cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+}
+
+#cursor-ring {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ff0000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
